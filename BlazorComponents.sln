@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32714.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jimmys20.BlazorComponents", "Jimmys20.BlazorComponents\Jimmys20.BlazorComponents.csproj", "{6C08D4A0-F25E-4185-9A22-0A1059B7085C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jimmys20.BlazorComponents", "src\Jimmys20.BlazorComponents\Jimmys20.BlazorComponents.csproj", "{6C08D4A0-F25E-4185-9A22-0A1059B7085C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jimmys20.BlazorComponents.Demo", "demo\Jimmys20.BlazorComponents.Demo\Jimmys20.BlazorComponents.Demo.csproj", "{7E4DE370-D999-4A2F-B9FA-EAF1058A2F58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{6C08D4A0-F25E-4185-9A22-0A1059B7085C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C08D4A0-F25E-4185-9A22-0A1059B7085C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C08D4A0-F25E-4185-9A22-0A1059B7085C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E4DE370-D999-4A2F-B9FA-EAF1058A2F58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E4DE370-D999-4A2F-B9FA-EAF1058A2F58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E4DE370-D999-4A2F-B9FA-EAF1058A2F58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E4DE370-D999-4A2F-B9FA-EAF1058A2F58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
