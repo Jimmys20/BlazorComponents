@@ -6,4 +6,35 @@
 
 Welcome to your new app.
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+<JSelect T="Customer"
+         DisplayItem="@nameof(Customer.LastName)"
+         ValueItem="@nameof(Customer.Id)"
+         Data="_customers" />
+
+@code {
+    private List<Customer> _customers = new()
+    {
+        new Customer(1, "Jim", "Mar"),
+        new Customer(2, "afa", "eea"),
+        new Customer(3, "1e11", "ca"),
+        new Customer(100, "aefa", "21e"),
+    };
+
+    private class Customer
+    {
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+
+        public Customer()
+        {
+        }
+
+        public Customer(int id, string firstName, string lastName)
+        {
+            Id = id;
+            FirstName = firstName;
+            LastName = lastName;
+        }
+    }
+}
