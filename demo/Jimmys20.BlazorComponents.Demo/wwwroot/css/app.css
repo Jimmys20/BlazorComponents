@@ -62,3 +62,20 @@ a, .btn-link {
     .blazor-error-boundary::after {
         content: "An error has occurred."
     }
+
+.j-dropzone {
+    border: 1px dashed var(--bs-secondary);
+    border-radius: 0.2rem;
+}
+
+.j-draggable {
+    height: 100%;
+}
+
+.j-can-drop {
+    border: 2px dashed var(--bs-success);
+    border-radius: 0.2rem;
+}
+
+.j-container {
+}
