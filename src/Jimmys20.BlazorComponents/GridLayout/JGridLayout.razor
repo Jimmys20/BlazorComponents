@@ -1,0 +1,29 @@
+﻿@namespace Jimmys20.BlazorComponents
+@typeparam T
+
+<div class="@Class"
+     style="display: grid;
+            grid-template-columns: @string.Join(" ", _columns.Select(c => c.Width));
+            grid-template-rows: @string.Join(" ", _rows.Select(r => r.Height));
+            column-gap: @ColumnGap;
+            row-gap: @RowGap;">
+
+    <CascadingValue Value="this" IsFixed="true">
+        @Columns
+        @Rows
+
+        @*@for (var i = 0; i < 16; i++)
+        {
+            T item = default(T);
+
+
+            @ChildContent()
+
+        }*@
+
+        @foreach (var item in Data)
+        {        
+            @ChildContent(item)
+        }
+    </CascadingValue>
+</div>

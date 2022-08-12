@@ -2,39 +2,92 @@
 
 <PageTitle>Index</PageTitle>
 
-<h1>Hello, world!</h1>
+<div class="h-100 d-flex flex-column">
+    <div>
+        <button @onclick="OnAdd">Add</button>
+        <button @onclick="Swap">Swap</button>
+    </div>
 
-Welcome to your new app.
+    <JGridLayout Data="_customers"
+                 Class="flex-grow-1"
+                 ColumnGap="0.25rem"
+                 RowGap="0.25rem">
+        <Columns>
+            <JGridLayoutColumn Width="minmax(0, 1fr)" T="Customer" />
+            <JGridLayoutColumn Width="minmax(0, 1fr)" T="Customer" />
+            <JGridLayoutColumn Width="minmax(0, 1fr)" T="Customer" />
+            <JGridLayoutColumn Width="minmax(0, 1fr)" T="Customer" />
+        </Columns>
 
-<JSelect T="Customer"
-         DisplayItem="@nameof(Customer.LastName)"
-         ValueItem="@nameof(Customer.Id)"
-         Data="_customers" />
+        <Rows>
+            <JGridLayoutRow Height="minmax(0, 1fr)" T="Customer" />
+            <JGridLayoutRow Height="minmax(0, 1fr)" T="Customer" />
+            <JGridLayoutRow Height="minmax(0, 1fr)" T="Customer" />
+            <JGridLayoutRow Height="minmax(0, 1fr)" T="Customer" />
+        </Rows>
+
+        <ChildContent>
+            <div class="card" style="height: 100%;" data-id="@context.Id">
+                <div class="card-header bg-primary">
+                    @context.Id
+                </div>
+                <div class="card-body">
+                    @context.Name
+                    <button @onclick="() => Remove(context.Id)">Remove</button>
+                </div>
+            </div>
+        </ChildContent>
+    </JGridLayout>
+
+</div>
 
 @code {
     private List<Customer> _customers = new()
     {
-        new Customer(1, "Jim", "Mar"),
-        new Customer(2, "afa", "eea"),
-        new Customer(3, "1e11", "ca"),
-        new Customer(100, "aefa", "21e"),
+        new Customer{Id="1", Name="caca",Index=0},
+        new Customer{Id="2", Name="afafa",Index=2},
+        new Customer{Id="3", Name="33rq",Index=5},
+        new Customer{Id="4", Name="afa",Index=9},
     };
 
-    private class Customer
+    private SortedList<int, int> afaf = new();
+    private void Remove(string id)
     {
-        public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        _customers.RemoveAll(c => c.Id == id);
+    }
+    private void OnAdd()
+    {
 
-        public Customer()
-        {
-        }
+        _customers.Add(new Customer { Id = "1", Name = "caca", Index = 4 });
+    }
 
-        public Customer(int id, string firstName, string lastName)
-        {
-            Id = id;
-            FirstName = firstName;
-            LastName = lastName;
-        }
+    private void OnItemChange(string param)
+    {
+        //var s = param.Split(',');
+        //var index = int.Parse(s[0]);
+        //var id = s[1];
+
+        //var list = new List<Customer>(_customers);
+
+        //var customer = list.FirstOrDefault(c => c.Id == id);
+        //list[list.IndexOf(customer)].Index = index;
+
+
+        //_customers = list;
+
+        //StateHasChanged();
+    }
+
+    private void Swap()
+    {
+        _customers[0].Index = 1;
+    }
+
+    public class Customer
+    {
+        public string Name { get; set; }
+        public string Id { get; set; }
+
+        public int Index { get; set; }
     }
 }
