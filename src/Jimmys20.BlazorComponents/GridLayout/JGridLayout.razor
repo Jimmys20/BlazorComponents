@@ -1,7 +1,7 @@
 ﻿@namespace Jimmys20.BlazorComponents
 @typeparam T
 
-<div class="@Class"
+<div class="j-container @Class"
      style="display: grid;
             grid-template-columns: @string.Join(" ", _columns.Select(c => c.Width));
             grid-template-rows: @string.Join(" ", _rows.Select(r => r.Height));
@@ -12,18 +12,18 @@
         @Columns
         @Rows
 
-        @*@for (var i = 0; i < 16; i++)
+        @for (var i = 0; i < Capacity; i++)
         {
-            T item = default(T);
+            var item = Items.FirstOrDefault(x => IndexField.Invoke(x) == i);
 
-
-            @ChildContent()
-
-        }*@
-
-        @foreach (var item in Data)
-        {        
-            @ChildContent(item)
+            <_JGridLayoutDropzone Index="i" CanDrop="CanDrop">
+                @if (item != null)
+                {
+                    <_JGridLayoutDraggable Item="item" Draggable="Draggable">
+                        @ItemTemplate(item)
+                    </_JGridLayoutDraggable>
+                }
+            </_JGridLayoutDropzone>
         }
     </CascadingValue>
 </div>

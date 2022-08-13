@@ -3,15 +3,21 @@
 <PageTitle>Index</PageTitle>
 
 <div class="h-100 d-flex flex-column">
-    <div>
-        <button @onclick="OnAdd">Add</button>
-        <button @onclick="Swap">Swap</button>
+    <div class="mb-1">
+        <button class="btn btn-primary" @onclick="Add">Add</button>
+        <button class="btn btn-primary" @onclick="Swap">Swap</button>
     </div>
 
-    <JGridLayout Data="_customers"
+    <JGridLayout T="Customer"
+                 Items="_customers"
+                 ItemDropped="OnItemDropped"
+                 IndexField="@((customer) => customer.Index)"
+                 CanDrop="CanDrop"
                  Class="flex-grow-1"
                  ColumnGap="0.25rem"
-                 RowGap="0.25rem">
+                 RowGap="0.25rem"
+                 Draggable="true">
+
         <Columns>
             <JGridLayoutColumn Width="minmax(0, 1fr)" T="Customer" />
             <JGridLayoutColumn Width="minmax(0, 1fr)" T="Customer" />
@@ -26,68 +32,99 @@
             <JGridLayoutRow Height="minmax(0, 1fr)" T="Customer" />
         </Rows>
 
-        <ChildContent>
-            <div class="card" style="height: 100%;" data-id="@context.Id">
-                <div class="card-header bg-primary">
-                    @context.Id
+        <ItemTemplate>
+            <div class="card" style="height: 100%;">
+                <div class="card-header bg-primary text-white">
+                    @context.Index
                 </div>
                 <div class="card-body">
-                    @context.Name
-                    <button @onclick="() => Remove(context.Id)">Remove</button>
+                    <p>@context.Name</p>
+
+                    @if (context.Id == 4)
+                    {
+                        <p><b>Is not allowed to drop.</b></p>
+                    }
+
+                    <button class="btn btn-danger"
+                            @onclick="() => Remove(context)">
+                        Remove
+                    </button>
                 </div>
             </div>
-        </ChildContent>
+        </ItemTemplate>
     </JGridLayout>
 
 </div>
 
 @code {
-    private List<Customer> _customers = new()
-    {
-        new Customer{Id="1", Name="caca",Index=0},
-        new Customer{Id="2", Name="afafa",Index=2},
-        new Customer{Id="3", Name="33rq",Index=5},
-        new Customer{Id="4", Name="afa",Index=9},
-    };
+    private const int MaxCapacity = 16;
 
-    private SortedList<int, int> afaf = new();
-    private void Remove(string id)
-    {
-        _customers.RemoveAll(c => c.Id == id);
-    }
-    private void OnAdd()
-    {
+    private List<Customer> _customers;
 
-        _customers.Add(new Customer { Id = "1", Name = "caca", Index = 4 });
+    protected override void OnInitialized()
+    {
+        _customers = CustomerService.GetCustomers().ToList();
     }
 
-    private void OnItemChange(string param)
+    private void OnItemDropped(DropEventArgs<Customer> args)
     {
-        //var s = param.Split(',');
-        //var index = int.Parse(s[0]);
-        //var id = s[1];
+        var droppedCustomer = args.Item;
+        var droppedIndex = args.Index;
 
-        //var list = new List<Customer>(_customers);
+        var existingCustomer = _customers.FirstOrDefault(c => c.Index == droppedIndex);
 
-        //var customer = list.FirstOrDefault(c => c.Id == id);
-        //list[list.IndexOf(customer)].Index = index;
+        if (existingCustomer != null)
+        {
+            existingCustomer.Index = droppedCustomer.Index;
+        }
 
+        droppedCustomer.Index = droppedIndex;
+    }
 
-        //_customers = list;
+    private bool CanDrop(Customer customer, int index)
+    {
+        if (customer.Id == 4 || index % 4 == 3)
+        {
+            return false;
+        }
 
-        //StateHasChanged();
+        return true;
+    }
+
+    private void Remove(Customer customer)
+    {
+        _customers.Remove(customer);
+    }
+
+    private void Add()
+    {
+        var emptyIndex = -1;
+
+        for (var i = 0; i < MaxCapacity; i++)
+        {
+            var customer = _customers.FirstOrDefault(c => c.Index == i);
+
+            if (customer == null)
+            {
+                emptyIndex = i;
+                break;
+            }
+        }
+
+        if (emptyIndex == -1) return;
+
+        var id = new Random().NextInt64(1000, 2000);
+
+        _customers.Add(new Customer 
+        {
+            Id = id,
+            Name = $"New customer {id}",
+            Index = emptyIndex
+        });
     }
 
     private void Swap()
     {
         _customers[0].Index = 1;
-    }
-
-    public class Customer
-    {
-        public string Name { get; set; }
-        public string Id { get; set; }
-
-        public int Index { get; set; }
     }
 }

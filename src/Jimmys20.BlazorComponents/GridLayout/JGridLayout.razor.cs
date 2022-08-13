@@ -1,19 +1,25 @@
 ﻿using Microsoft.AspNetCore.Components;
+using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Jimmys20.BlazorComponents
 {
     public partial class JGridLayout<T>
     {
-        [Parameter] public IEnumerable<T> Data { get; set; }
+        [Parameter] public IEnumerable<T> Items { get; set; }
+
+        [Parameter] public EventCallback<DropEventArgs<T>> ItemDropped { get; set; }
 
         [Parameter] public RenderFragment Columns { get; set; }
 
         [Parameter] public RenderFragment Rows { get; set; }
 
-        [Parameter] public RenderFragment<T> ChildContent { get; set; }
+        [Parameter] public RenderFragment<T> ItemTemplate { get; set; }
 
-        [Parameter] public string D { get; set; }
+        [Parameter] public Func<T, int> IndexField { get; set; }
+
+        [Parameter] public Func<T, int, bool> CanDrop { get; set; }
 
         [Parameter] public string ColumnGap { get; set; } = "normal";
 
@@ -21,19 +27,34 @@ namespace Jimmys20.BlazorComponents
 
         [Parameter] public string Class { get; set; }
 
-        private List<JGridLayoutColumn<T>> _columns = new();
-        private List<JGridLayoutRow<T>> _rows = new();
+        [Parameter] public bool Draggable { get; set; }
 
-        public void AddColumn(JGridLayoutColumn<T> gridLayoutColumn)
+        internal T Payload { get; set; }
+
+        private int Capacity => _columns.Count * _rows.Count;
+
+        private readonly List<JGridLayoutColumn<T>> _columns = new();
+        private readonly List<JGridLayoutRow<T>> _rows = new();
+
+        internal void AddColumn(JGridLayoutColumn<T> gridLayoutColumn)
         {
             _columns.Add(gridLayoutColumn);
             StateHasChanged();
         }
 
-        public void AddRow(JGridLayoutRow<T> gridLayoutRow)
+        internal void AddRow(JGridLayoutRow<T> gridLayoutRow)
         {
             _rows.Add(gridLayoutRow);
             StateHasChanged();
+        }
+
+        internal async Task UpdatePayloadAsync(int index)
+        {
+            await ItemDropped.InvokeAsync(new DropEventArgs<T>
+            {
+                Item = Payload,
+                Index = index,
+            });
         }
     }
 }

@@ -77,5 +77,10 @@ a, .btn-link {
     border-radius: 0.2rem;
 }
 
+.j-no-drop {
+    border: 2px dashed var(--bs-danger);
+    border-radius: 0.2rem;
+}
+
 .j-container {
 }
