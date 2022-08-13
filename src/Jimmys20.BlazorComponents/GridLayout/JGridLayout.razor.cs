@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 namespace Jimmys20.BlazorComponents
 {
+#if NET6_0
+    [CascadingTypeParameter(nameof(T))]
+#endif
     public partial class JGridLayout<T>
     {
         [Parameter] public IEnumerable<T> Items { get; set; }
