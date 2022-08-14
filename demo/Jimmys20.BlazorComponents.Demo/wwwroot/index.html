@@ -7,6 +7,9 @@
     <title>Jimmys20.BlazorComponents.Demo</title>
     <base href="/" />
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="https://cdn.jsdelivr.net/npm/mobile-drag-drop@3.0.0-beta.0/default.css" rel="stylesheet">
+
     <link href="css/app.css" rel="stylesheet" />
     <link href="Jimmys20.BlazorComponents.Demo.styles.css" rel="stylesheet" />
     <link href="manifest.json" rel="manifest" />
@@ -22,6 +25,17 @@
         <a href="" class="reload">Reload</a>
         <a class="dismiss">🗙</a>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/mobile-drag-drop@3.0.0-beta.0/index.min.js"></script>
+
+    <script>
+        // options are optional ;)
+        MobileDragDrop.polyfill({
+            // use this to make use of the scroll behaviour
+            dragImageTranslateOverride: MobileDragDrop.scrollBehaviourDragImageTranslateOverride
+        });
+    </script>
+
     <script src="_framework/blazor.webassembly.js"></script>
     <script>navigator.serviceWorker.register('service-worker.js');</script>
 </body>
