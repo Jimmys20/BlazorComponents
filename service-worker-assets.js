@@ -33,15 +33,15 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-\/A6Lgvw+S4nAvQ\/1aqbA9Ivph5icXmeo72mGv6rWDnU=",
+      "hash": "sha256-PFx30C+tGwfvwwXcaBmpRDB7pHvdNuU6vgWJ9OXuzus=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-KW0gNWtesPbKSz34MZTZUaPliydwgpINlKsSRX2gG9U=",
+      "hash": "sha256-oX0hJWERQh5sGo5L2yAlgq0C+qILubzlZf0v+aIzPU4=",
       "url": "_framework\/Jimmys20.BlazorComponents.Demo.dll"
     },
     {
-      "hash": "sha256-ti5NlDk\/Kul2ppMevqf12Ayc1fiAabR1V3WCCSmHNis=",
+      "hash": "sha256-VNSVNwINuaQCIMoJKWy\/HlKY938KYhch9rq+mRmXQyA=",
       "url": "_framework\/Jimmys20.BlazorComponents.dll"
     },
     {
@@ -245,5 +245,5 @@
       "url": "_content\/Jimmys20.BlazorComponents\/Jimmys20.BlazorComponents.bundle.scp.css"
     }
   ],
-  "version": "IOm0ZFXT"
+  "version": "v\/ftx+u3"
 };
