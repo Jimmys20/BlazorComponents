@@ -51,7 +51,7 @@ namespace Jimmys20.BlazorComponents
             StateHasChanged();
         }
 
-        internal async Task UpdatePayloadAsync(int index)
+        internal async Task InvokeItemDroppedAsync(int index)
         {
             await ItemDropped.InvokeAsync(new DropEventArgs<T>
             {

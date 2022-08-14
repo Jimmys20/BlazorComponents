@@ -14,7 +14,13 @@ namespace Jimmys20.BlazorComponents
         public RenderFragment ChildContent { get; set; }
 
         [Parameter]
+        public Func<T, int> IndexField { get; set; }
+
+        [Parameter]
         public Func<T, int, bool> CanDrop { get; set; }
+
+        [Parameter]
+        public bool Draggable { get; set; }
 
         [CascadingParameter]
         public JGridLayout<T> GridLayout { get; set; }
@@ -27,9 +33,9 @@ namespace Jimmys20.BlazorComponents
             _counter = 0;
             _dropClass = null;
 
-            if (!GridLayout.Draggable ||
+            if (!Draggable ||
                 EqualityComparer<T>.Default.Equals(GridLayout.Payload, default) ||
-                GridLayout.IndexField.Invoke(GridLayout.Payload) == Index ||
+                IndexField.Invoke(GridLayout.Payload) == Index ||
                 CanDrop?.Invoke(GridLayout.Payload, Index) == false)
             {
                 return;
@@ -37,14 +43,14 @@ namespace Jimmys20.BlazorComponents
 
             Console.WriteLine("HandleDrop");
 
-            await GridLayout.UpdatePayloadAsync(Index);
+            await GridLayout.InvokeItemDroppedAsync(Index);
         }
 
         private void HandleDragEnter()
         {
-            if (!GridLayout.Draggable ||
+            if (!Draggable ||
                 EqualityComparer<T>.Default.Equals(GridLayout.Payload, default) ||
-                GridLayout.IndexField.Invoke(GridLayout.Payload) == Index)
+                IndexField.Invoke(GridLayout.Payload) == Index)
             {
                 return;
             }
@@ -65,9 +71,9 @@ namespace Jimmys20.BlazorComponents
 
         private void HandleDragLeave()
         {
-            if (!GridLayout.Draggable ||
+            if (!Draggable ||
                 EqualityComparer<T>.Default.Equals(GridLayout.Payload, default) ||
-                GridLayout.IndexField.Invoke(GridLayout.Payload) == Index)
+                IndexField.Invoke(GridLayout.Payload) == Index)
             {
                 return;
             }

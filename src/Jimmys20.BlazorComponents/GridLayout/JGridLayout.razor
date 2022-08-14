@@ -16,7 +16,7 @@
         {
             var item = Items.FirstOrDefault(x => IndexField.Invoke(x) == i);
 
-            <_JGridLayoutDropzone Index="i" CanDrop="CanDrop">
+            <_JGridLayoutDropzone Index="i" IndexField="IndexField" CanDrop="CanDrop" Draggable="Draggable">
                 @if (item != null)
                 {
                     <_JGridLayoutDraggable Item="item" Draggable="Draggable">
