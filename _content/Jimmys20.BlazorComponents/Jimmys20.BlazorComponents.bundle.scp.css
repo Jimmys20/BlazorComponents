@@ -1,0 +1,43 @@
+/* _content/Jimmys20.BlazorComponents/JSelect.razor.rz.scp.css */
+.dropbtn[b-x3zejfywhk] {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+    .dropbtn:hover[b-x3zejfywhk], .dropbtn:focus[b-x3zejfywhk] {
+        background-color: #2980B9;
+    }
+
+.dropdown[b-x3zejfywhk] {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content[b-x3zejfywhk] {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    .dropdown-content a[b-x3zejfywhk] {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+.dropdown a:hover[b-x3zejfywhk] {
+    background-color: #ddd;
+}
+
+.show[b-x3zejfywhk] {
+    display: block;
+}
