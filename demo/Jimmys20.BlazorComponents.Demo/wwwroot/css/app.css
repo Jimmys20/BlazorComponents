@@ -80,6 +80,7 @@ a, .btn-link {
 .j-no-drop {
     border: 2px dashed var(--bs-danger);
     border-radius: 0.2rem;
+    background-color: rgba(var(--bs-danger-rgb), .25);
 }
 
 .j-container {
