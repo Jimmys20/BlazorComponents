@@ -229,7 +229,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-AB7yrdVIuhqGkLDBTh1fYjhdpWpL1/kJA9mFLXIBswM=",
+      "hash": "sha256-zZzitbYtP6qyLitoWZbH7e7IQ+q9G1vIauc6cSZjaYE=",
       "url": "index.html"
     },
     {
@@ -245,5 +245,5 @@
       "url": "_content\/Jimmys20.BlazorComponents\/Jimmys20.BlazorComponents.bundle.scp.css"
     }
   ],
-  "version": "v\/ftx+u3"
+  "version": "e2fPhygP"
 };
