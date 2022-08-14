@@ -1,7 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
+    <Version>1.0.0</Version>
     <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
+    <Authors>Maragkos Dimitrios</Authors>
+    <RepositoryUrl>https://github.com/Jimmys20/BlazorComponents</RepositoryUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/Jimmys20/BlazorComponents</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Description>Collection of various Blazor components.</Description>
   </PropertyGroup>
 
   <ItemGroup>
