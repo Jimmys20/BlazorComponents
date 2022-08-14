@@ -229,8 +229,12 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-zZzitbYtP6qyLitoWZbH7e7IQ+q9G1vIauc6cSZjaYE=",
+      "hash": "sha256-iRXUxjsc/Fhicb+HVEr+m+GTqUIKq+s4q4olu44s70U=",
       "url": "index.html"
+    },
+    {
+      "hash": "sha256-8htfLPRd3yNdiURzoSf+23dAGhZWT5RgVTdqVcmsBwQ=",
+      "url": "js\/DragDropTouch.js"
     },
     {
       "hash": "sha256-Qu1yOKXLoXwPiPiG4FqinQ8vGBi3I5MP1lOKzWg5nok=",
@@ -245,5 +249,5 @@
       "url": "_content\/Jimmys20.BlazorComponents\/Jimmys20.BlazorComponents.bundle.scp.css"
     }
   ],
-  "version": "e2fPhygP"
+  "version": "L374b1kH"
 };
