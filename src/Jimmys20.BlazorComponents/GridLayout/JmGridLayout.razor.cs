@@ -51,6 +51,18 @@ namespace Jimmys20.BlazorComponents
             StateHasChanged();
         }
 
+        internal void RemoveColumn(JmGridLayoutColumn<T> gridLayoutColumn)
+        {
+            _columns.Remove(gridLayoutColumn);
+            StateHasChanged();
+        }
+
+        internal void RemoveRow(JmGridLayoutRow<T> gridLayoutRow)
+        {
+            _rows.Remove(gridLayoutRow);
+            StateHasChanged();
+        }
+
         internal async Task InvokeItemDroppedAsync(int index)
         {
             await ItemDropped.InvokeAsync(new DropEventArgs<T>

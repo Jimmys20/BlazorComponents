@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.Components;
+using System;
 
 namespace Jimmys20.BlazorComponents
 {
-    public class JmGridLayoutColumn<T> : ComponentBase
+    public class JmGridLayoutColumn<T> : ComponentBase, IDisposable
     {
         [Parameter]
         public string Width { get; set; } = "none";
@@ -13,6 +14,11 @@ namespace Jimmys20.BlazorComponents
         protected override void OnInitialized()
         {
             GridLayout.AddColumn(this);
+        }
+
+        public void Dispose()
+        {
+            GridLayout.RemoveColumn(this);
         }
     }
 }

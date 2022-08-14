@@ -19,17 +19,35 @@
                   Draggable="true">
 
         <Columns>
-            <JmGridLayoutColumn Width="minmax(0, 1fr)" />
-            <JmGridLayoutColumn Width="minmax(0, 1fr)" />
-            <JmGridLayoutColumn Width="minmax(0, 1fr)" />
-            <JmGridLayoutColumn Width="minmax(0, 1fr)" />
+            @if (_isLarge)
+            {
+                for (var i = 0; i < 8; i++)
+                {
+                    <JmGridLayoutColumn Width="minmax(0, 1fr)" />
+                }
+            }
+            else
+            {
+                <JmGridLayoutColumn Width="minmax(0, 1fr)" />
+                <JmGridLayoutColumn Width="minmax(0, 1fr)" />
+                <JmGridLayoutColumn Width="minmax(0, 1fr)" />
+                <JmGridLayoutColumn Width="minmax(0, 1fr)" />
+            }
         </Columns>
 
         <Rows>
-            <JmGridLayoutRow Height="minmax(0, 1fr)" />
-            <JmGridLayoutRow Height="minmax(0, 1fr)" />
-            <JmGridLayoutRow Height="minmax(0, 1fr)" />
-            <JmGridLayoutRow Height="minmax(0, 1fr)" />
+            @if (_isLarge)
+            {
+                <JmGridLayoutRow Height="minmax(0, 1fr)" />
+                <JmGridLayoutRow Height="minmax(0, 1fr)" />
+            }
+            else
+            {
+                <JmGridLayoutRow Height="minmax(0, 1fr)" />
+                <JmGridLayoutRow Height="minmax(0, 1fr)" />
+                <JmGridLayoutRow Height="minmax(0, 1fr)" />
+                <JmGridLayoutRow Height="minmax(0, 1fr)" />
+            }
         </Rows>
 
         <ItemTemplate>
@@ -56,10 +74,13 @@
 
 </div>
 
+<MediaQuery Media="@Breakpoints.LargeUp" @bind-Matches="_isLarge" />
+
 @code {
     private const int MaxCapacity = 16;
 
     private List<Customer> _customers;
+    private bool _isLarge;
 
     protected override void OnInitialized()
     {
@@ -115,12 +136,12 @@
 
         var id = new Random().NextInt64(1000, 2000);
 
-        _customers.Add(new Customer 
-        {
-            Id = id,
-            Name = $"New customer {id}",
-            Index = emptyIndex
-        });
+        _customers.Add(new Customer
+            {
+                Id = id,
+                Name = $"New customer {id}",
+                Index = emptyIndex
+            });
     }
 
     private void Swap()
