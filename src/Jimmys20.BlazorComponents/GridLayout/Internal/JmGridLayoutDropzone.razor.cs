@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Jimmys20.BlazorComponents
+namespace Jimmys20.BlazorComponents.GridLayout.Internal
 {
-    public partial class _JGridLayoutDropzone<T>
+    public partial class JmGridLayoutDropzone<T>
     {
         [Parameter]
         public int Index { get; set; }
@@ -23,7 +23,7 @@ namespace Jimmys20.BlazorComponents
         public bool Draggable { get; set; }
 
         [CascadingParameter]
-        public JGridLayout<T> GridLayout { get; set; }
+        public JmGridLayout<T> GridLayout { get; set; }
 
         private string _dropClass;
         private int _counter;

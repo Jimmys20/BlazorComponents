@@ -8,7 +8,7 @@ namespace Jimmys20.BlazorComponents
 #if NET6_0
     [CascadingTypeParameter(nameof(T))]
 #endif
-    public partial class JGridLayout<T>
+    public partial class JmGridLayout<T>
     {
         [Parameter] public IEnumerable<T> Items { get; set; }
 
@@ -36,16 +36,16 @@ namespace Jimmys20.BlazorComponents
 
         private int Capacity => _columns.Count * _rows.Count;
 
-        private readonly List<JGridLayoutColumn<T>> _columns = new();
-        private readonly List<JGridLayoutRow<T>> _rows = new();
+        private readonly List<JmGridLayoutColumn<T>> _columns = new();
+        private readonly List<JmGridLayoutRow<T>> _rows = new();
 
-        internal void AddColumn(JGridLayoutColumn<T> gridLayoutColumn)
+        internal void AddColumn(JmGridLayoutColumn<T> gridLayoutColumn)
         {
             _columns.Add(gridLayoutColumn);
             StateHasChanged();
         }
 
-        internal void AddRow(JGridLayoutRow<T> gridLayoutRow)
+        internal void AddRow(JmGridLayoutRow<T> gridLayoutRow)
         {
             _rows.Add(gridLayoutRow);
             StateHasChanged();

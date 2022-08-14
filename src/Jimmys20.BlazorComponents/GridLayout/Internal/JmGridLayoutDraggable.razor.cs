@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Components;
 using System;
 
-namespace Jimmys20.BlazorComponents
+namespace Jimmys20.BlazorComponents.GridLayout.Internal
 {
-    public partial class _JGridLayoutDraggable<T>
+    public partial class JmGridLayoutDraggable<T>
     {
         [Parameter]
         public bool Draggable { get; set; }
@@ -15,7 +15,7 @@ namespace Jimmys20.BlazorComponents
         public RenderFragment ChildContent { get; set; }
 
         [CascadingParameter]
-        public JGridLayout<T> GridLayout { get; set; }
+        public JmGridLayout<T> GridLayout { get; set; }
 
         private void HandleDragStart()
         {

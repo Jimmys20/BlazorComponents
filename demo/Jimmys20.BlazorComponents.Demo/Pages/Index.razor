@@ -8,28 +8,28 @@
         <button class="btn btn-primary" @onclick="Swap">Swap</button>
     </div>
 
-    <JGridLayout T="Customer"
-                 Items="_customers"
-                 ItemDropped="OnItemDropped"
-                 IndexField="@((customer) => customer.Index)"
-                 CanDrop="CanDrop"
-                 Class="flex-grow-1"
-                 ColumnGap="0.25rem"
-                 RowGap="0.25rem"
-                 Draggable="true">
+    <JmGridLayout T="Customer"
+                  Items="_customers"
+                  ItemDropped="OnItemDropped"
+                  IndexField="@((customer) => customer.Index)"
+                  CanDrop="CanDrop"
+                  Class="flex-grow-1"
+                  ColumnGap="0.25rem"
+                  RowGap="0.25rem"
+                  Draggable="true">
 
         <Columns>
-            <JGridLayoutColumn Width="minmax(0, 1fr)" />
-            <JGridLayoutColumn Width="minmax(0, 1fr)" />
-            <JGridLayoutColumn Width="minmax(0, 1fr)" />
-            <JGridLayoutColumn Width="minmax(0, 1fr)" />
+            <JmGridLayoutColumn Width="minmax(0, 1fr)" />
+            <JmGridLayoutColumn Width="minmax(0, 1fr)" />
+            <JmGridLayoutColumn Width="minmax(0, 1fr)" />
+            <JmGridLayoutColumn Width="minmax(0, 1fr)" />
         </Columns>
 
         <Rows>
-            <JGridLayoutRow Height="minmax(0, 1fr)" />
-            <JGridLayoutRow Height="minmax(0, 1fr)" />
-            <JGridLayoutRow Height="minmax(0, 1fr)" />
-            <JGridLayoutRow Height="minmax(0, 1fr)" />
+            <JmGridLayoutRow Height="minmax(0, 1fr)" />
+            <JmGridLayoutRow Height="minmax(0, 1fr)" />
+            <JmGridLayoutRow Height="minmax(0, 1fr)" />
+            <JmGridLayoutRow Height="minmax(0, 1fr)" />
         </Rows>
 
         <ItemTemplate>
@@ -52,7 +52,7 @@
                 </div>
             </div>
         </ItemTemplate>
-    </JGridLayout>
+    </JmGridLayout>
 
 </div>
 

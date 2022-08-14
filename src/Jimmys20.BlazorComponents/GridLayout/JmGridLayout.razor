@@ -1,4 +1,5 @@
-﻿@namespace Jimmys20.BlazorComponents
+﻿@using Jimmys20.BlazorComponents.GridLayout.Internal
+@namespace Jimmys20.BlazorComponents
 @typeparam T
 
 <div class="j-container @Class"
@@ -16,14 +17,14 @@
         {
             var item = Items.FirstOrDefault(x => IndexField.Invoke(x) == i);
 
-            <_JGridLayoutDropzone Index="i" IndexField="IndexField" CanDrop="CanDrop" Draggable="Draggable">
+            <JmGridLayoutDropzone Index="i" IndexField="IndexField" CanDrop="CanDrop" Draggable="Draggable">
                 @if (item != null)
                 {
-                    <_JGridLayoutDraggable Item="item" Draggable="Draggable">
+                    <JmGridLayoutDraggable Item="item" Draggable="Draggable">
                         @ItemTemplate(item)
-                    </_JGridLayoutDraggable>
+                    </JmGridLayoutDraggable>
                 }
-            </_JGridLayoutDropzone>
+            </JmGridLayoutDropzone>
         }
     </CascadingValue>
 </div>
