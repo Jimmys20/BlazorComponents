@@ -2,19 +2,26 @@
 
 Collection of various Blazor components.
 
-## Demo
+**Demo:** https://jimmys20.github.io/BlazorComponents/
 
-https://jimmys20.github.io/BlazorComponents/
+## Getting Started
 
-## Installation
+#### Install the NuGet package.
 
 > Install-Package Jimmys20.BlazorComponents
 
-## Usage
-
-#### _Imports.razor
+#### Add the following to your _Imports.razor.
 
 ```razor
-...
 @using Jimmys20.BlazorComponents
 ```
+
+## Documentation
+
+- [JmGridLayout](https://github.com/Jimmys20/BlazorComponents/wiki/JmGridLayout)
+
+## Contribute
+
+You are welcome to open [issues](https://github.com/Jimmys20/BlazorComponents/issues) and start [discussions](https://github.com/Jimmys20/BlazorComponents/discussions) about the library. Your feedback will be appreciated.
+
+For code contributions, fork the repository and create a new branch based on master. When you are done with your changes, create a pull request. Try to stay consistent with the project's coding style.
