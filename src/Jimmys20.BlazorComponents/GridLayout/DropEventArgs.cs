@@ -2,7 +2,20 @@
 {
     public class DropEventArgs<T>
     {
-        public T Item { get; set; }
-        public int Index { get; set; }
+        /// <summary>
+        /// Gets the dropped item.
+        /// </summary>
+        public T Item { get; }
+
+        /// <summary>
+        /// Gets the index where the item was dropped.
+        /// </summary>
+        public int Index { get; }
+
+        public DropEventArgs(T item, int index)
+        {
+            Item = item;
+            Index = index;
+        }
     }
 }
