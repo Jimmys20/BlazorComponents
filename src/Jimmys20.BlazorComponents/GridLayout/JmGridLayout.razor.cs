@@ -106,8 +106,11 @@ namespace Jimmys20.BlazorComponents
 
         internal async Task InvokeItemDroppedAsync(int index)
         {
-            var args = new DropEventArgs<T>(Payload, index);
-            await ItemDropped.InvokeAsync(args);
+            await ItemDropped.InvokeAsync(new DropEventArgs<T>
+            {
+                Item = Payload,
+                Index = index,
+            });
         }
     }
 }
