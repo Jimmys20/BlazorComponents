@@ -74,26 +74,34 @@ namespace Jimmys20.BlazorComponents
 
         internal void AddColumn(JmGridLayoutColumn<T> gridLayoutColumn)
         {
-            _columns.Add(gridLayoutColumn);
-            StateHasChanged();
+            if (!_columns.Contains(gridLayoutColumn))
+            {
+                _columns.Add(gridLayoutColumn);
+            }
         }
 
         internal void AddRow(JmGridLayoutRow<T> gridLayoutRow)
         {
-            _rows.Add(gridLayoutRow);
-            StateHasChanged();
+            if (!_rows.Contains(gridLayoutRow))
+            {
+                _rows.Add(gridLayoutRow);
+            }
         }
 
         internal void RemoveColumn(JmGridLayoutColumn<T> gridLayoutColumn)
         {
-            _columns.Remove(gridLayoutColumn);
-            StateHasChanged();
+            if (_columns.Contains(gridLayoutColumn))
+            {
+                _columns.Remove(gridLayoutColumn);
+            }
         }
 
         internal void RemoveRow(JmGridLayoutRow<T> gridLayoutRow)
         {
-            _rows.Remove(gridLayoutRow);
-            StateHasChanged();
+            if (_rows.Contains(gridLayoutRow))
+            {
+                _rows.Remove(gridLayoutRow);
+            }
         }
 
         internal async Task InvokeItemDroppedAsync(int index)
