@@ -109,7 +109,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-sYcnqB3BZU1530VRuAYwxnj952qKF3J04IYizdwkykY=",
+      "hash": "sha256-WO2TuAZx1tY4teh+4fFWFGpv4fQj67H9ZwTn6Ok0M24=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -117,11 +117,11 @@
       "url": "_framework\/BlazorPro.BlazorSize.dll"
     },
     {
-      "hash": "sha256-2SARG7jiToxb3ECpfRDccBXqAyfvdIr7tCTf3LbamXY=",
+      "hash": "sha256-Fwogw71JRQsd9mpm8nHqDJXmguaclWz9l0PGyBIcMtQ=",
       "url": "_framework\/Jimmys20.BlazorComponents.Demo.dll"
     },
     {
-      "hash": "sha256-xS0b5G0+w+67z2tK0QkD5643AQtfDyOYbA+UYUvVRcE=",
+      "hash": "sha256-eMfRZ1K13KenO+xpqsbYXzmdtMQwYFC1evOcjFyPm64=",
       "url": "_framework\/Jimmys20.BlazorComponents.dll"
     },
     {
@@ -269,5 +269,5 @@
       "url": "_content\/Jimmys20.BlazorComponents\/Jimmys20.BlazorComponents.bundle.scp.css"
     }
   ],
-  "version": "IqOSMf1y"
+  "version": "VMeBG8nz"
 };
