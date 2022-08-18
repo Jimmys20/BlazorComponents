@@ -78,6 +78,8 @@ namespace Jimmys20.BlazorComponents
             {
                 _columns.Add(gridLayoutColumn);
             }
+
+            StateHasChanged();
         }
 
         internal void AddRow(JmGridLayoutRow<T> gridLayoutRow)
@@ -86,6 +88,8 @@ namespace Jimmys20.BlazorComponents
             {
                 _rows.Add(gridLayoutRow);
             }
+
+            StateHasChanged();
         }
 
         internal void RemoveColumn(JmGridLayoutColumn<T> gridLayoutColumn)
@@ -94,6 +98,8 @@ namespace Jimmys20.BlazorComponents
             {
                 _columns.Remove(gridLayoutColumn);
             }
+
+            StateHasChanged();
         }
 
         internal void RemoveRow(JmGridLayoutRow<T> gridLayoutRow)
@@ -102,6 +108,8 @@ namespace Jimmys20.BlazorComponents
             {
                 _rows.Remove(gridLayoutRow);
             }
+
+            StateHasChanged();
         }
 
         internal async Task InvokeItemDroppedAsync(int index)
