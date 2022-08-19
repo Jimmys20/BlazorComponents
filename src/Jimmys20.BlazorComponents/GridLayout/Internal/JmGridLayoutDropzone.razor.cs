@@ -13,17 +13,14 @@ namespace Jimmys20.BlazorComponents.GridLayout.Internal
         [Parameter]
         public RenderFragment ChildContent { get; set; }
 
-        [Parameter]
-        public Func<T, int> IndexField { get; set; }
-
-        [Parameter]
-        public Func<T, int, bool> CanDrop { get; set; }
-
-        [Parameter]
-        public bool Draggable { get; set; }
-
         [CascadingParameter]
         public JmGridLayout<T> GridLayout { get; set; }
+
+        private Func<T, int> IndexField => GridLayout.IndexField;
+
+        private Func<T, int, bool> CanDrop => GridLayout.CanDrop;
+
+        private bool Draggable => GridLayout.Draggable;
 
         private string _dropClass;
         private int _counter;

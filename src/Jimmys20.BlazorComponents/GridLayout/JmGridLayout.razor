@@ -9,7 +9,7 @@
             column-gap: @ColumnGap;
             row-gap: @RowGap;">
 
-    <CascadingValue Value="this" IsFixed="true">
+    <CascadingValue Value="this" IsFixed>
         @Columns
         @Rows
 
@@ -17,10 +17,10 @@
         {
             var item = Items.FirstOrDefault(x => IndexField.Invoke(x) == i);
 
-            <JmGridLayoutDropzone Index="i" IndexField="IndexField" CanDrop="CanDrop" Draggable="Draggable">
-                @if (item != null)
+            <JmGridLayoutDropzone Index="i" T="T">
+                @if (!EqualityComparer<T>.Default.Equals(item, default))
                 {
-                    <JmGridLayoutDraggable Item="item" Draggable="Draggable">
+                    <JmGridLayoutDraggable Item="item">
                         @ItemTemplate(item)
                     </JmGridLayoutDraggable>
                 }

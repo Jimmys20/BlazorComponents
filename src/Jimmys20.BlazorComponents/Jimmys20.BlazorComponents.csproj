@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
     <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
     <Authors>Maragkos Dimitrios</Authors>
     <RepositoryUrl>https://github.com/Jimmys20/BlazorComponents</RepositoryUrl>

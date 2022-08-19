@@ -5,7 +5,8 @@
 <div class="h-100 d-flex flex-column">
     <div class="mb-1">
         <button class="btn btn-primary" @onclick="Add">Add</button>
-        <button class="btn btn-primary" @onclick="Swap">Swap</button>
+        <button class="btn btn-primary" @onclick="Move">Move</button>
+        <button class="btn btn-primary" @onclick="() =>_isDraggable = !_isDraggable">Toggle draggable</button>
     </div>
 
     <JmGridLayout T="Customer"
@@ -16,7 +17,7 @@
                   Class="flex-grow-1"
                   ColumnGap="0.25rem"
                   RowGap="0.25rem"
-                  Draggable="true">
+                  Draggable="_isDraggable">
 
         <Columns>
             @if (_isLarge)
@@ -81,6 +82,8 @@
 
     private List<Customer> _customers;
     private bool _isLarge;
+    private bool _isDraggable = true;
+    private Random _random = new();
 
     protected override void OnInitialized()
     {
@@ -134,7 +137,7 @@
 
         if (emptyIndex == -1) return;
 
-        var id = new Random().NextInt64(1000, 2000);
+        var id = _random.NextInt64(1000, 2000);
 
         _customers.Add(new Customer
         {
@@ -144,8 +147,22 @@
         });
     }
 
-    private void Swap()
+    private void Move()
     {
-        _customers[0].Index = 1;
+        if (_customers.Count == MaxCapacity)
+        {
+            return;
+        }
+
+        while (true)
+        {
+            var index = _random.Next(0, MaxCapacity - 1);
+
+            if (!_customers.Any(c => c.Index == index))
+            {
+                _customers[0].Index = index;
+                break;
+            }
+        }
     }
 }

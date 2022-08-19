@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Jimmys20.BlazorComponents
@@ -72,14 +73,18 @@ namespace Jimmys20.BlazorComponents
         private readonly List<JmGridLayoutColumn<T>> _columns = new();
         private readonly List<JmGridLayoutRow<T>> _rows = new();
 
+        protected override void OnParametersSet()
+        {
+            Items ??= Enumerable.Empty<T>();
+        }
+
         internal void AddColumn(JmGridLayoutColumn<T> gridLayoutColumn)
         {
             if (!_columns.Contains(gridLayoutColumn))
             {
                 _columns.Add(gridLayoutColumn);
+                StateHasChanged();
             }
-
-            StateHasChanged();
         }
 
         internal void AddRow(JmGridLayoutRow<T> gridLayoutRow)
@@ -87,9 +92,8 @@ namespace Jimmys20.BlazorComponents
             if (!_rows.Contains(gridLayoutRow))
             {
                 _rows.Add(gridLayoutRow);
+                StateHasChanged();
             }
-
-            StateHasChanged();
         }
 
         internal void RemoveColumn(JmGridLayoutColumn<T> gridLayoutColumn)
@@ -97,9 +101,8 @@ namespace Jimmys20.BlazorComponents
             if (_columns.Contains(gridLayoutColumn))
             {
                 _columns.Remove(gridLayoutColumn);
+                StateHasChanged();
             }
-
-            StateHasChanged();
         }
 
         internal void RemoveRow(JmGridLayoutRow<T> gridLayoutRow)
@@ -107,9 +110,8 @@ namespace Jimmys20.BlazorComponents
             if (_rows.Contains(gridLayoutRow))
             {
                 _rows.Remove(gridLayoutRow);
+                StateHasChanged();
             }
-
-            StateHasChanged();
         }
 
         internal async Task InvokeItemDroppedAsync(int index)

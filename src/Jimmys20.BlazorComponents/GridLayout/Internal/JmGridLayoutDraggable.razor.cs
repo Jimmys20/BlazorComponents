@@ -6,9 +6,6 @@ namespace Jimmys20.BlazorComponents.GridLayout.Internal
     public partial class JmGridLayoutDraggable<T>
     {
         [Parameter]
-        public bool Draggable { get; set; }
-
-        [Parameter]
         public T Item { get; set; }
 
         [Parameter]
@@ -16,6 +13,8 @@ namespace Jimmys20.BlazorComponents.GridLayout.Internal
 
         [CascadingParameter]
         public JmGridLayout<T> GridLayout { get; set; }
+
+        private bool Draggable => GridLayout.Draggable;
 
         private void HandleDragStart()
         {
