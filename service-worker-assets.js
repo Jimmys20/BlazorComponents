@@ -109,7 +109,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-f8StoxhZwrJCKmIvFFY6Orrsi2aJhW9Zj5kxYc06aqc=",
+      "hash": "sha256-l7dmroT30wgmANvUBcSR63OV7tSEi6GJVUsr4zmrseg=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -117,7 +117,7 @@
       "url": "_framework\/BlazorPro.BlazorSize.dll"
     },
     {
-      "hash": "sha256-r+KxTWUBrpZZ1xZaNz\/nMya8TqOfZFj195UfACkKcZU=",
+      "hash": "sha256-pPbeyrTmhpau5UMUp20pTcJh5XUA20qqnFGl9SIcO\/g=",
       "url": "_framework\/Jimmys20.BlazorComponents.Demo.dll"
     },
     {
@@ -265,5 +265,5 @@
       "url": "_content\/BlazorPro.BlazorSize\/blazorSizeResizeModule.js"
     }
   ],
-  "version": "zQQMV8yz"
+  "version": "eFRWsJNU"
 };
