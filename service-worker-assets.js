@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-yDL9+Fqu9wnncu8pzv2bsGVHorjpOgrwN2VQPnkZfho=",
+      "hash": "sha256-yFYM95XDSdvAI+O5R3HVlA6ijh3bjOOMQKRklhH78bM=",
       "url": "css\/app.css"
     },
     {
@@ -109,7 +109,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-l7dmroT30wgmANvUBcSR63OV7tSEi6GJVUsr4zmrseg=",
+      "hash": "sha256-UAkrByide14R8s\/FoRYAl7987ISMLNBcIBo1JvKv7is=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -117,15 +117,15 @@
       "url": "_framework\/BlazorPro.BlazorSize.dll"
     },
     {
-      "hash": "sha256-pPbeyrTmhpau5UMUp20pTcJh5XUA20qqnFGl9SIcO\/g=",
+      "hash": "sha256-tOcClTrrtlM5Y6Z\/T7VUCBNbmTzU0BF+kdTT+GDa4Y4=",
       "url": "_framework\/Jimmys20.BlazorComponents.Demo.dll"
     },
     {
-      "hash": "sha256-FnxNOKmb3ULvSpSIBM\/QZ4CY5Ebooak0CP5eQVTsz9c=",
+      "hash": "sha256-llHgB+JX481QWfe4D5P0T1pIsuleckXV4WaVtlZrrGw=",
       "url": "_framework\/Jimmys20.BlazorComponents.dll"
     },
     {
-      "hash": "sha256-cIjOzCKBXVNDuGenZzFYTdtn\/w+XNCBZRs8s4Ca3qFk=",
+      "hash": "sha256-7JNHYP90dNnPNGBwpf2q\/twRCFeDZmdsozRSTC1tzdE=",
       "url": "_framework\/Microsoft.AspNetCore.Components.dll"
     },
     {
@@ -263,7 +263,11 @@
     {
       "hash": "sha256-6u1xlNCyUMZN72VU7ZYq4j2wUugUrzPoZz9jjK5t\/OI=",
       "url": "_content\/BlazorPro.BlazorSize\/blazorSizeResizeModule.js"
+    },
+    {
+      "hash": "sha256-RoayX5HZeafnuZ9wJkZGhdp9+NOy4DXbOmGVbvYp\/yo=",
+      "url": "_content\/Jimmys20.BlazorComponents\/js\/grid-layout.js"
     }
   ],
-  "version": "eFRWsJNU"
+  "version": "xVu\/xvJR"
 };

@@ -8,9 +8,9 @@
   "resources": {
     "assembly": {
       "BlazorPro.BlazorSize.dll": "sha256-T87pzU2XEyWSiFhUnmIlHPq2YuVLVeqJ0gYo8cwuHBY=",
-      "Jimmys20.BlazorComponents.Demo.dll": "sha256-pPbeyrTmhpau5UMUp20pTcJh5XUA20qqnFGl9SIcO\/g=",
-      "Jimmys20.BlazorComponents.dll": "sha256-FnxNOKmb3ULvSpSIBM\/QZ4CY5Ebooak0CP5eQVTsz9c=",
-      "Microsoft.AspNetCore.Components.dll": "sha256-cIjOzCKBXVNDuGenZzFYTdtn\/w+XNCBZRs8s4Ca3qFk=",
+      "Jimmys20.BlazorComponents.Demo.dll": "sha256-tOcClTrrtlM5Y6Z\/T7VUCBNbmTzU0BF+kdTT+GDa4Y4=",
+      "Jimmys20.BlazorComponents.dll": "sha256-llHgB+JX481QWfe4D5P0T1pIsuleckXV4WaVtlZrrGw=",
+      "Microsoft.AspNetCore.Components.dll": "sha256-7JNHYP90dNnPNGBwpf2q\/twRCFeDZmdsozRSTC1tzdE=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-0aR4Y1cN4iPqfEadyUaDtu2btR5SjzMAE0C7cPfuo1w=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-hItIMIcIumfGi1q3IylwSEfpyLuK1QShnYCDeXYXF+M=",
       "Microsoft.Extensions.Configuration.Abstractions.dll": "sha256-zhFtW4kE16TdrpPne9I1Cu9o0KYzrS50VE9MVSifJg4=",
