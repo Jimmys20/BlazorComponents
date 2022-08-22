@@ -66,6 +66,11 @@ namespace Jimmys20.BlazorComponents
         /// </summary>
         [Parameter] public bool Draggable { get; set; }
 
+        /// <summary>
+        /// Specify a css selector for a handle element if you don't want to allow drag action on the entire element.
+        /// </summary>
+        [Parameter] public string Handle { get; set; }
+
         internal T Payload { get; set; }
 
         private int Capacity => _columns.Count * _rows.Count;

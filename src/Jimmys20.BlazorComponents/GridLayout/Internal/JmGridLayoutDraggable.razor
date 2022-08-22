@@ -1,6 +1,7 @@
 ﻿@typeparam T
 
-<div class="j-draggable"
+<div @ref="draggableRef"
+     class="j-draggable"
      draggable="@Draggable.ToString().ToLower()"
      @ondragstart="HandleDragStart"
      @ondragend="HandleDragEnd">

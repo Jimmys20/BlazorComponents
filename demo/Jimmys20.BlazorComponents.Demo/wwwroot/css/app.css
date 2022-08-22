@@ -72,6 +72,10 @@ a, .btn-link {
     height: 100%;
 }
 
+    .j-draggable .card-header {
+        cursor: move;
+    }
+
 .j-can-drop {
     border: 2px dashed var(--bs-success);
     border-radius: 0.2rem;

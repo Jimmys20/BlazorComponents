@@ -1,10 +1,15 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
 using System;
+using System.Threading.Tasks;
 
 namespace Jimmys20.BlazorComponents.GridLayout.Internal
 {
     public partial class JmGridLayoutDraggable<T>
     {
+        [Inject]
+        private IJSRuntime JS { get; set; }
+
         [Parameter]
         public T Item { get; set; }
 
@@ -15,6 +20,21 @@ namespace Jimmys20.BlazorComponents.GridLayout.Internal
         public JmGridLayout<T> GridLayout { get; set; }
 
         private bool Draggable => GridLayout.Draggable;
+
+        private string Handle => GridLayout.Handle;
+
+        private ElementReference draggableRef;
+
+        protected override async Task OnAfterRenderAsync(bool firstRender)
+        {
+            if (firstRender && Draggable && !string.IsNullOrEmpty(Handle))
+            {
+                var module = await JS.InvokeAsync<IJSObjectReference>("import",
+                    "./_content/Jimmys20.BlazorComponents/js/grid-layout.js");
+
+                await module.InvokeVoidAsync("enableDragHandle", draggableRef, Handle);
+            }
+        }
 
         private void HandleDragStart()
         {
