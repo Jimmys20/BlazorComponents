@@ -11,7 +11,7 @@ namespace Jimmys20.BlazorComponents
         [Parameter] public string Width { get; set; } = "none";
 
         [CascadingParameter]
-        public JmGridLayout<T> GridLayout { get; set; }
+        private JmGridLayout<T> GridLayout { get; set; }
 
         protected override void OnInitialized()
         {

@@ -17,7 +17,7 @@ namespace Jimmys20.BlazorComponents.GridLayout.Internal
         public RenderFragment ChildContent { get; set; }
 
         [CascadingParameter]
-        public JmGridLayout<T> GridLayout { get; set; }
+        private JmGridLayout<T> GridLayout { get; set; }
 
         private bool Draggable => GridLayout.Draggable;
 
