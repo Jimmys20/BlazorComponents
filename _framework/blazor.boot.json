@@ -8,8 +8,8 @@
   "resources": {
     "assembly": {
       "BlazorPro.BlazorSize.dll": "sha256-T87pzU2XEyWSiFhUnmIlHPq2YuVLVeqJ0gYo8cwuHBY=",
-      "Jimmys20.BlazorComponents.Demo.dll": "sha256-PEPg\/X3ZB0jWrUXwGVDVL6qauX6i7JbPKb80DPXVt14=",
-      "Jimmys20.BlazorComponents.dll": "sha256-XkTN3a8TiQuTxJPd9qXOGNZdcmoQzapSTVvAdYW2g+M=",
+      "Jimmys20.BlazorComponents.Demo.dll": "sha256-B1xXLSAmPsANSb6YI2szaZOnEEQVhkufmmWwbfmWYqY=",
+      "Jimmys20.BlazorComponents.dll": "sha256-GlXYLOWXs6mS3EpuWAkl8P9PCl58z4XwnmCS5XQuoyg=",
       "Microsoft.AspNetCore.Components.dll": "sha256-7JNHYP90dNnPNGBwpf2q\/twRCFeDZmdsozRSTC1tzdE=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-0aR4Y1cN4iPqfEadyUaDtu2btR5SjzMAE0C7cPfuo1w=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-hItIMIcIumfGi1q3IylwSEfpyLuK1QShnYCDeXYXF+M=",
