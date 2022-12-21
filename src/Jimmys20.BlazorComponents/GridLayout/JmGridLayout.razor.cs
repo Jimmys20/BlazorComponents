@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace Jimmys20.BlazorComponents
 {
-#if NET6_0
     [CascadingTypeParameter(nameof(T))]
-#endif
     public partial class JmGridLayout<T>
     {
         /// <summary>

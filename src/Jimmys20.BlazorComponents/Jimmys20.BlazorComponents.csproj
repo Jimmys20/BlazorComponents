@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <Version>1.0.6</Version>
-    <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
+    <Version>1.0.7</Version>
+    <TargetFramework>net7.0</TargetFramework>
     <Authors>Maragkos Dimitrios</Authors>
     <RepositoryUrl>https://github.com/Jimmys20/BlazorComponents</RepositoryUrl>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
@@ -16,12 +16,8 @@
     <SupportedPlatform Include="browser" />
   </ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.17" />
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.8" />
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.1" />
   </ItemGroup>
 
 </Project>
