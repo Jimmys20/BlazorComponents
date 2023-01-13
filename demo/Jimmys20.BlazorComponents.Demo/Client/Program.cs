@@ -1,10 +1,6 @@
 using BlazorPro.BlazorSize;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Net.Http;
-using System.Threading.Tasks;
 
 namespace Jimmys20.BlazorComponents.Demo
 {

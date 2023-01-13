@@ -1,8 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <Version>1.0.7</Version>
+    <Version>1.0.8</Version>
     <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
     <Authors>Maragkos Dimitrios</Authors>
     <RepositoryUrl>https://github.com/Jimmys20/BlazorComponents</RepositoryUrl>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
@@ -18,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.2" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
-using System;
-using System.Threading.Tasks;
 
 namespace Jimmys20.BlazorComponents.GridLayout.Internal
 {

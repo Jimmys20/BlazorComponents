@@ -1,5 +1,4 @@
 ﻿using Jimmys20.BlazorComponents.Demo.Models;
-using System.Collections.Generic;
 
 namespace Jimmys20.BlazorComponents.Demo.Services
 {
