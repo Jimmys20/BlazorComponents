@@ -149,3 +149,8 @@ main[b-gei1bskmxe] {
         overflow-y: auto;
     }
 }
+
+.nav-link[b-t6do1iw26u] {
+    --bs-nav-link-padding-y: 0.5rem;
+    --bs-nav-link-padding-x: 1rem;
+}
