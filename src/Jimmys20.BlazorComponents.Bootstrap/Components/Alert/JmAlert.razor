@@ -1,0 +1,14 @@
+﻿@namespace Jimmys20.BlazorComponents.Bootstrap
+@inherits BootstrapComponentBase
+
+@if (Visible)
+{
+    <div class="@CssClass" role="alert" style="@Style" @attributes="AdditionalAttributes">
+        @ChildContent
+
+        @if (Dismissible)
+        {
+            <JmCloseButton Clicked="OnCloseButtonClicked" />
+        }
+    </div>
+}

@@ -1,0 +1,19 @@
+﻿@namespace Jimmys20.BlazorComponents.Bootstrap
+@inherits BootstrapComponentBase
+
+@if (IsButton)
+{
+    <button type="button" class="@CssClass" aria-current="@(Active ? "true" : null)" disabled="@Disabled"
+            style="@Style" @attributes="AdditionalAttributes" @onclick="HandleClick">
+
+        @ChildContent
+    </button>
+}
+else
+{
+    <div class="@CssClass" aria-current="@(Active ? "true" : null)" aria-disabled="@(Disabled ? "true" : null)"
+         style="@Style" @attributes="AdditionalAttributes">
+
+        @ChildContent
+    </div>
+}

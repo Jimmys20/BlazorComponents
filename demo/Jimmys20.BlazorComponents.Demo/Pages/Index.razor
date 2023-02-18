@@ -1,12 +1,13 @@
 ﻿@page "/"
+@inject IDialogService Dialog
 
 <PageTitle>Index</PageTitle>
 
 <div class="h-100 d-flex flex-column">
     <div class="mb-1">
-        <button class="btn btn-primary" @onclick="Add">Add</button>
-        <button class="btn btn-primary" @onclick="Move">Move</button>
-        <button class="btn btn-primary" @onclick="() =>_isDraggable = !_isDraggable">Toggle draggable</button>
+        <JmButton Color="Color.Primary" Clicked="Add">Add</JmButton>
+        <JmButton Color="Color.Primary" Clicked="Move">Move</JmButton>
+        <JmButton Color="Color.Primary" Clicked="() =>_isDraggable = !_isDraggable" Active="_isDraggable">Toggle draggable</JmButton>
     </div>
 
     <JmGridLayout T="Customer"
@@ -65,10 +66,10 @@
                         <p><b>Is not allowed to drop.</b></p>
                     }
 
-                    <button class="btn btn-danger"
-                            @onclick="() => Remove(context)">
+                    <JmButton Color="Color.Danger"
+                              Clicked="() => Remove(context)">
                         Remove
-                    </button>
+                    </JmButton>
                 </div>
             </div>
         </ItemTemplate>
@@ -116,9 +117,14 @@
         return true;
     }
 
-    private void Remove(Customer customer)
+    private async Task Remove(Customer customer)
     {
-        _customers.Remove(customer);
+        var isConfirmed = await Dialog.Confirm($"Are you sure you want to remove {customer.Name}?");
+
+        if (isConfirmed)
+        {
+            _customers.Remove(customer);
+        }
     }
 
     private void Add()

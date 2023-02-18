@@ -1,0 +1,23 @@
+﻿@namespace Jimmys20.BlazorComponents.Bootstrap
+@inherits BootstrapComponentBase
+
+<button type="@Type.ToButtonTypeString()" class="@CssClass" aria-pressed="@(Active ? "true" : null)" disabled="@Disabled"
+        style="@Style" @attributes="AdditionalAttributes" @onclick="HandleClick" @onclick:preventDefault="PreventDefault">
+
+    @if (Loading)
+    {
+        if (LoadingTemplate == null)
+        {
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            @ChildContent
+        }
+        else
+        {
+            @LoadingTemplate
+        }
+    }
+    else
+    {
+        @ChildContent
+    }
+</button>

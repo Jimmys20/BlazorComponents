@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32714.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jimmys20.BlazorComponents", "src\Jimmys20.BlazorComponents\Jimmys20.BlazorComponents.csproj", "{6C08D4A0-F25E-4185-9A22-0A1059B7085C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jimmys20.BlazorComponents.Bootstrap", "src\Jimmys20.BlazorComponents.Bootstrap\Jimmys20.BlazorComponents.Bootstrap.csproj", "{4990516B-E6B9-4B9A-B196-403C21D2D664}"
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jimmys20.BlazorComponents.Demo", "demo\Jimmys20.BlazorComponents.Demo\Jimmys20.BlazorComponents.Demo.csproj", "{7E4DE370-D999-4A2F-B9FA-EAF1058A2F58}"
 EndProject
 Global
@@ -17,6 +19,10 @@ Global
 		{6C08D4A0-F25E-4185-9A22-0A1059B7085C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C08D4A0-F25E-4185-9A22-0A1059B7085C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C08D4A0-F25E-4185-9A22-0A1059B7085C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4990516B-E6B9-4B9A-B196-403C21D2D664}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4990516B-E6B9-4B9A-B196-403C21D2D664}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4990516B-E6B9-4B9A-B196-403C21D2D664}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4990516B-E6B9-4B9A-B196-403C21D2D664}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7E4DE370-D999-4A2F-B9FA-EAF1058A2F58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7E4DE370-D999-4A2F-B9FA-EAF1058A2F58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E4DE370-D999-4A2F-B9FA-EAF1058A2F58}.Release|Any CPU.ActiveCfg = Release|Any CPU

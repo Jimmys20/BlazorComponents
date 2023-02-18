@@ -20,6 +20,10 @@ Collection of various Blazor components.
 
 - [JmGridLayout](https://github.com/Jimmys20/BlazorComponents/wiki/JmGridLayout)
 
+## Extensions
+
+- [BlazorComponents.Bootstrap](src/Jimmys20.BlazorComponents.Bootstrap)
+
 ## Contribute
 
 You are welcome to open [issues](https://github.com/Jimmys20/BlazorComponents/issues) and start [discussions](https://github.com/Jimmys20/BlazorComponents/discussions) about the library. Your feedback will be appreciated.

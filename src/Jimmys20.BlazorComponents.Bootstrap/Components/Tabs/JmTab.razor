@@ -1,0 +1,10 @@
+﻿@namespace Jimmys20.BlazorComponents.Bootstrap
+@inherits BootstrapComponentBase
+
+<li class="nav-item" role="presentation">
+    <button class="@CssClass" type="button" role="tab" aria-selected="@(Active ? "true" : "false")" disabled="@Disabled"
+            tabindex="@(Active ? null : "-1")" style="@Style" @attributes="AdditionalAttributes" @onclick="HandleClick">
+
+        @ChildContent
+    </button>
+</li>

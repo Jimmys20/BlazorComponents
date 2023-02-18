@@ -1,0 +1,8 @@
+﻿@namespace Jimmys20.BlazorComponents.Bootstrap
+@inherits BootstrapComponentBase
+
+<div class="@CssClass" style="@Style" @attributes="AdditionalAttributes" @onclick:stopPropagation>
+    <div class="modal-content">
+        @ChildContent
+    </div>
+</div>

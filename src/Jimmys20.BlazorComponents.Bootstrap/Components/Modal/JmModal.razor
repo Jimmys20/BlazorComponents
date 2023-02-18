@@ -1,0 +1,14 @@
+﻿@namespace Jimmys20.BlazorComponents.Bootstrap
+@inherits BootstrapComponentBase
+
+<div class="@CssClass" tabindex="-1" aria-hidden="@(Visible ? null : "true")" aria-modal="@(Visible ? "true" : null)"
+     role="@(Visible ? "dialog" : null)" style="@Style" @attributes="AdditionalAttributes"
+     @onclick="OnModalBackdropClicked">
+
+    @ChildContent
+</div>
+
+@if (Visible)
+{
+    <div class="modal-backdrop show"></div>
+}

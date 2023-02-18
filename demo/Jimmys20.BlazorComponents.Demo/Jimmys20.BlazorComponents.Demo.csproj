@@ -8,12 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="BlazorPro.BlazorSize" Version="6.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.2" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.3" PrivateAssets="all" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Jimmys20.BlazorComponents\Jimmys20.BlazorComponents.csproj" />
+    <ProjectReference Include="..\..\src\Jimmys20.BlazorComponents.Bootstrap\Jimmys20.BlazorComponents.Bootstrap.csproj" />
   </ItemGroup>
 
   <ItemGroup>

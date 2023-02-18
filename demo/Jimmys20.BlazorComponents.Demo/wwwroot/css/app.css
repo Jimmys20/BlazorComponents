@@ -109,7 +109,7 @@ a, .btn-link {
     height: 100%;
 }
 
-    .j-draggable .card-header {
+    .j-draggable[draggable=true] .card-header {
         cursor: move;
     }
 
