@@ -53,7 +53,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-ALaot7sb7Be+pc4XKyEmsp5JXuO/2JJM0Tq9pS+Vh/E=",
+      "hash": "sha256-mGvWFMsnrZwqqDHqRQESf/++D9nY9pZNcZpCCuOtGXg=",
       "url": "index.html"
     },
     {
@@ -273,5 +273,5 @@
       "url": "_content\/Jimmys20.BlazorComponents\/js\/grid-layout.js"
     }
   ],
-  "version": "fO1trJ14"
+  "version": "K7L1FSGO"
 };
