@@ -36,10 +36,10 @@ namespace Jimmys20.BlazorComponents.Bootstrap
         [Parameter(CaptureUnmatchedValues = true)] public IDictionary<string, object> AdditionalAttributes { get; set; }
 
         protected virtual CssBuilder CssBuilder => new CssBuilder()
-            .AddClass(Background.ToBackgroundString())
-            .AddClass(TextColor.ToTextColorString())
-            .AddClass(FontSize.ToFontSizeString())
-            .AddClass(Class);
+            .AddClass(Background.ToBackgroundString(), when: Background != Background.Default)
+            .AddClass(TextColor.ToTextColorString(), when: TextColor != TextColor.Default)
+            .AddClass(FontSize.ToFontSizeString(), when: FontSize != FontSize.Default)
+            .AddClass(Class, when: Class != null);
 
         protected string CssClass => CssBuilder.NullIfEmpty();
     }

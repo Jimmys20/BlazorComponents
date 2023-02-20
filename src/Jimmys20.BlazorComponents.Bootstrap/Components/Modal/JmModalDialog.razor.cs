@@ -29,6 +29,6 @@ namespace Jimmys20.BlazorComponents.Bootstrap
             .AddClass("modal-dialog")
             .AddClass("modal-dialog-scrollable", when: Scrollable)
             .AddClass("modal-dialog-centered", when: Centered)
-            .AddClass(Size.ToModalSizeString());
+            .AddClass(Size.ToModalSizeString(), when: Size != ModalSize.Default);
     }
 }
