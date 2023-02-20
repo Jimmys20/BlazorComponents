@@ -57,7 +57,7 @@
       "url": "index.html"
     },
     {
-      "hash": "sha256-8htfLPRd3yNdiURzoSf+23dAGhZWT5RgVTdqVcmsBwQ=",
+      "hash": "sha256-kgT3FC2Tn\/nZYlPmmTAUrSPen9gQYUaAyb8jFODkqh4=",
       "url": "js\/DragDropTouch.js"
     },
     {
@@ -273,5 +273,5 @@
       "url": "_content\/Jimmys20.BlazorComponents\/js\/grid-layout.js"
     }
   ],
-  "version": "fhvmJmvw"
+  "version": "unb7MQe4"
 };
