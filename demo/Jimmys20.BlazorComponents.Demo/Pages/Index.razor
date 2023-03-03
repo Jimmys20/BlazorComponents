@@ -54,11 +54,11 @@
         </Rows>
 
         <ItemTemplate>
-            <div class="card" style="height: 100%;">
-                <div class="card-header bg-primary text-white">
+            <JmCard Class="h-100">
+                <JmCardHeader Color="Color.Primary">
                     @context.Index
-                </div>
-                <div class="card-body">
+                </JmCardHeader>
+                <JmCardBody>
                     <p>@context.Name</p>
 
                     @if (context.Id == 4)
@@ -70,8 +70,8 @@
                               Clicked="() => Remove(context)">
                         Remove
                     </JmButton>
-                </div>
-            </div>
+                </JmCardBody>
+            </JmCard>
         </ItemTemplate>
     </JmGridLayout>
 
