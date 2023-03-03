@@ -100,29 +100,29 @@ a, .btn-link {
         content: var(--blazor-load-percentage-text, "Loading");
     }
 
-.j-dropzone {
+.jm-dropzone {
     border: 1px dashed var(--bs-secondary);
     border-radius: 0.2rem;
 }
 
-.j-draggable {
+.jm-draggable {
     height: 100%;
 }
 
-    .j-draggable[draggable=true] .card-header {
+    .jm-draggable[draggable=true] .card-header {
         cursor: move;
     }
 
-.j-can-drop {
+.jm-can-drop {
     border: 2px dashed var(--bs-success);
     border-radius: 0.2rem;
 }
 
-.j-no-drop {
+.jm-no-drop {
     border: 2px dashed var(--bs-danger);
     border-radius: 0.2rem;
     background-color: rgba(var(--bs-danger-rgb), .25);
 }
 
-.j-container {
+.jm-container {
 }

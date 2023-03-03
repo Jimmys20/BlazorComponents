@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-t\/yCqblPM0L8DP+y1lpFWof509YkURnWT2XTtpgHdJc=",
+      "hash": "sha256-BNLFjjTJM2q9TNj95t6GcnCI06g3vOLfeJRzLBFARzw=",
       "url": "css\/app.css"
     },
     {
@@ -101,7 +101,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-22EbO2L8QGhRT0y4o5Kng6wuSAxyx2UTDUumF4BQrOQ=",
+      "hash": "sha256-jmBqwr2cV7og0Y6M2RgI12dFXrNkIidmUofM4CwAS2I=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -113,15 +113,15 @@
       "url": "_framework\/BlazorPro.BlazorSize.dll"
     },
     {
-      "hash": "sha256-GeP6v0vRTQ28O5yrpTM8GQkWv\/257Mq6jZDqF7wZkuE=",
+      "hash": "sha256-S5gy5cUo\/CKycc4c4zUPHIUH7WO0SN3X8bAGeZUgybc=",
       "url": "_framework\/Jimmys20.BlazorComponents.Bootstrap.dll"
     },
     {
-      "hash": "sha256-EUw4cCLnjlPVnEJSNaeEgBtEF1BZS2vXBGy3IANUFrg=",
+      "hash": "sha256-Gs3hLVLTZfErJrtQ1BUR+26rKjvj0agmnKe7CLvWGIs=",
       "url": "_framework\/Jimmys20.BlazorComponents.Demo.dll"
     },
     {
-      "hash": "sha256-44eyH0s95hraRFRVybxAu9WRrwrSGxbZnrAcLx7erY8=",
+      "hash": "sha256-02ghASzow4vlagwDcsDMzkX7z1AubZTQJEw0h5Ch52E=",
       "url": "_framework\/Jimmys20.BlazorComponents.dll"
     },
     {
@@ -273,5 +273,5 @@
       "url": "_content\/Jimmys20.BlazorComponents\/js\/grid-layout.js"
     }
   ],
-  "version": "UXCtKsNz"
+  "version": "g1k1b+09"
 };
