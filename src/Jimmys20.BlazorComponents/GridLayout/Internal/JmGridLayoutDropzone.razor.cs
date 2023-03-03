@@ -55,11 +55,11 @@ namespace Jimmys20.BlazorComponents.GridLayout.Internal
 
             if (CanDrop?.Invoke(GridLayout.Payload, Index) == false)
             {
-                _dropClass = "j-no-drop";
+                _dropClass = "jm-no-drop";
             }
             else
             {
-                _dropClass = "j-can-drop";
+                _dropClass = "jm-can-drop";
             }
         }
 
