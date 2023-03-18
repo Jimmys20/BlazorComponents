@@ -33,11 +33,12 @@ namespace Jimmys20.BlazorComponents.Bootstrap
         [CascadingParameter]
         private DropdownComponent Dropdown { get; set; }
 
-        private bool Expanded => Dropdown.Visible;
+        private bool Visible => Dropdown.Visible;
 
         protected override CssBuilder CssBuilder => base.CssBuilder
             .AddClass("btn dropdown-toggle")
-            .AddClass(Outline ? $"btn-outline-{Color.ToColorString()}" : $"btn-{Color.ToColorString()}", when: Color != Color.Default);
+            .AddClass(Outline ? $"btn-outline-{Color.ToColorString()}" : $"btn-{Color.ToColorString()}", when: Color != Color.Default)
+            .AddClass("show", when: Visible);
 
         private void HandleClick()
         {

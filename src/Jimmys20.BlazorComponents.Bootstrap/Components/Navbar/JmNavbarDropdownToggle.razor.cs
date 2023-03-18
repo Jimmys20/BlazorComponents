@@ -18,10 +18,11 @@ namespace Jimmys20.BlazorComponents.Bootstrap
         [CascadingParameter]
         private DropdownComponent Dropdown { get; set; }
 
-        private bool Expanded => Dropdown.Visible;
+        private bool Visible => Dropdown.Visible;
 
         protected override CssBuilder CssBuilder => base.CssBuilder
-            .AddClass("btn btn-link nav-link dropdown-toggle");
+            .AddClass("btn btn-link nav-link dropdown-toggle")
+            .AddClass("show", when: Visible);
 
         private void HandleClick()
         {
