@@ -18,7 +18,7 @@ namespace Jimmys20.BlazorComponents.Bootstrap
         protected override CssBuilder CssBuilder => base.CssBuilder
             .AddClass("dropdown-item");
 
-        private async Task HandleClick()
+        private async Task HandleMouseDown()
         {
             await Clicked.InvokeAsync();
         }
