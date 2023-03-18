@@ -1,5 +1,6 @@
 ﻿using BlazorComponentUtilities;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
 
 namespace Jimmys20.BlazorComponents.Bootstrap
 {
@@ -18,9 +19,12 @@ namespace Jimmys20.BlazorComponents.Bootstrap
         protected override CssBuilder CssBuilder => base.CssBuilder
             .AddClass("dropdown-item");
 
-        private async Task HandleMouseDown()
+        private async Task HandleMouseDown(MouseEventArgs args)
         {
-            await Clicked.InvokeAsync();
+            if (args.Button == 0)
+            {
+                await Clicked.InvokeAsync();
+            }
         }
     }
 }
