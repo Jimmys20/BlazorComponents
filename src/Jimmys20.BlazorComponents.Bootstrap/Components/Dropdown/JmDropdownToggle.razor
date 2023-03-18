@@ -1,0 +1,8 @@
+﻿@namespace Jimmys20.BlazorComponents.Bootstrap
+@inherits BootstrapComponentBase
+
+<button class="@CssClass" type="button" aria-expanded="@(Expanded ? "true" : "false")" disabled="@Disabled"
+        style="@Style" @attributes="AdditionalAttributes" @onclick="HandleClick">
+
+    @ChildContent
+</button>

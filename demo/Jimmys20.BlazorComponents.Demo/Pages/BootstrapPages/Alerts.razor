@@ -1,0 +1,48 @@
+﻿@page "/bootstrap/alerts"
+
+<h1>Alerts</h1>
+
+<div class="row g-3">
+    <div class="col-12 col-md-6">
+        <JmAlert Color="Color.Primary" Visible>
+            A simple primary alert—check it out!
+        </JmAlert>
+
+        <JmAlert Color="Color.Secondary" Visible>
+            A simple secondary alert—check it out!
+        </JmAlert>
+
+        <JmAlert Color="Color.Success" Visible>
+            A simple success alert—check it out!
+        </JmAlert>
+
+        <JmAlert Color="Color.Danger" Visible>
+            A simple danger alert—check it out!
+        </JmAlert>
+    </div>
+
+    <div class="col-12 col-md-6">
+        <JmAlert Color="Color.Warning" @bind-Visible="_isWarningAlertVisible" Dismissible>
+            A simple warning alert—check it out!
+        </JmAlert>
+
+        <JmAlert Color="Color.Info" @bind-Visible="_isInfoAlertVisible" Dismissible>
+            A simple info alert—check it out!
+        </JmAlert>
+
+        <JmAlert Color="Color.Light" @bind-Visible="_isLightAlertVisible" Dismissible>
+            A simple light alert—check it out!
+        </JmAlert>
+
+        <JmAlert Color="Color.Dark" @bind-Visible="_isDarkAlertVisible" Dismissible>
+            A simple dark alert—check it out!
+        </JmAlert>
+    </div>
+</div>
+
+@code {
+    private bool _isWarningAlertVisible = true;
+    private bool _isInfoAlertVisible = true;
+    private bool _isLightAlertVisible = true;
+    private bool _isDarkAlertVisible = true;
+}

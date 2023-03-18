@@ -21,7 +21,7 @@ namespace Jimmys20.BlazorComponents.GridLayout.Internal
 
         private string Handle => GridLayout.Handle;
 
-        private ElementReference draggableRef;
+        private ElementReference _draggableRef;
 
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
@@ -30,7 +30,7 @@ namespace Jimmys20.BlazorComponents.GridLayout.Internal
                 var module = await JS.InvokeAsync<IJSObjectReference>("import",
                     "./_content/Jimmys20.BlazorComponents/js/grid-layout.js");
 
-                await module.InvokeVoidAsync("enableDragHandle", draggableRef, Handle);
+                await module.InvokeVoidAsync("enableDragHandle", _draggableRef, Handle);
             }
         }
 

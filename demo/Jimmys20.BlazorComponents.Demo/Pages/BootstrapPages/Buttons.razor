@@ -1,0 +1,66 @@
+﻿@page "/bootstrap/buttons"
+
+<h1>Buttons</h1>
+
+<div class="row g-3 mb-3">
+    <div class="col-12">
+        <JmButton Color="Color.Primary" Loading>
+            Loading...
+        </JmButton>
+
+        <JmButton Color="Color.Primary" Clicked="Load" Loading="_isLoading" Disabled="_isLoading">
+            @(_isLoading ? " Loading..." : "Load")
+        </JmButton>
+
+        <JmButton Color="Color.Primary" Clicked="Save" Loading="_isSaving" Disabled="_isSaving">
+            <LoadingTemplate>
+                Saving...
+            </LoadingTemplate>
+
+            <ChildContent>
+                Save
+            </ChildContent>
+        </JmButton>
+    </div>
+
+    <div class="col-12">
+        <JmButton Color="Color.Primary">Primary</JmButton>
+        <JmButton Color="Color.Secondary">Secondary</JmButton>
+        <JmButton Color="Color.Success">Success</JmButton>
+        <JmButton Color="Color.Danger">Danger</JmButton>
+        <JmButton Color="Color.Warning">Warning</JmButton>
+        <JmButton Color="Color.Info">Info</JmButton>
+        <JmButton Color="Color.Light">Light</JmButton>
+        <JmButton Color="Color.Dark">Dark</JmButton>
+    </div>
+
+    <div class="col-12">
+        <JmButton Outline Color="Color.Primary">Primary</JmButton>
+        <JmButton Outline Color="Color.Secondary">Secondary</JmButton>
+        <JmButton Outline Color="Color.Success">Success</JmButton>
+        <JmButton Outline Color="Color.Danger">Danger</JmButton>
+        <JmButton Outline Color="Color.Warning">Warning</JmButton>
+        <JmButton Outline Color="Color.Info">Info</JmButton>
+        <JmButton Outline Color="Color.Light">Light</JmButton>
+        <JmButton Outline Color="Color.Dark">Dark</JmButton>
+    </div>
+</div>
+
+@code {
+    private bool _isLoading = false;
+    private bool _isSaving = false;
+
+    private async Task Load()
+    {
+        _isLoading = true;
+        await Task.Delay(5000);
+        _isLoading = false;
+    }
+
+    private async Task Save()
+    {
+        _isSaving = true;
+        await Task.Delay(5000);
+        _isSaving = false;
+    }
+}

@@ -1,0 +1,8 @@
+﻿@namespace Jimmys20.BlazorComponents.Bootstrap
+@inherits DropdownComponent
+
+<li class="@CssClass" style="@Style" @attributes="AdditionalAttributes" tabindex="-1" @onfocusout="HandleFocusOut">
+    <CascadingValue Value="this" IsFixed>
+        @ChildContent
+    </CascadingValue>
+</li>

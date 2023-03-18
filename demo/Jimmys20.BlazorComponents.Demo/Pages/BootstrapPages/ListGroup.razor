@@ -1,0 +1,148 @@
+﻿@page "/bootstrap/listgroup"
+
+<h1>List group</h1>
+
+<div class="row g-3 mb-3">
+    <div class="col-12">
+        <JmButton Color="Color.Primary" Clicked="() => _isFlush = !_isFlush" Active="_isFlush">
+            Toggle flush
+        </JmButton>
+
+        <JmButton Color="Color.Primary" Clicked="() => _isNumbered = !_isNumbered" Active="_isNumbered">
+            Toggle numbered
+        </JmButton>
+    </div>
+
+    <div class="col-12 col-md-6">
+        <JmListGroup Flush="_isFlush" Numbered="_isNumbered">
+            <JmListGroupItem Active>
+                An active item
+            </JmListGroupItem>
+
+            <JmListGroupItem>
+                A second item
+            </JmListGroupItem>
+
+            <JmListGroupItem>
+                A third item
+            </JmListGroupItem>
+
+            <JmListGroupItem>
+                A fourth item
+            </JmListGroupItem>
+
+            <JmListGroupItem Disabled>
+                A disabled item
+            </JmListGroupItem>
+        </JmListGroup>
+    </div>
+
+    <div class="col-12 col-md-6">
+        <JmListGroup Flush="_isFlush" Numbered="_isNumbered">
+            <JmListGroupItem Clicked="@(() => Console.WriteLine("first"))" Active>
+                The current button
+            </JmListGroupItem>
+
+            <JmListGroupItem Clicked="@(() => Console.WriteLine("second"))">
+                A second button item
+            </JmListGroupItem>
+
+            <JmListGroupItem Clicked="@(() => Console.WriteLine("third"))">
+                A third button item
+            </JmListGroupItem>
+
+            <JmListGroupItem Clicked="@(() => Console.WriteLine("fourth"))">
+                A fourth button item
+            </JmListGroupItem>
+
+            <JmListGroupItem Clicked="@(() => Console.WriteLine("fifth"))" Disabled>
+                A disabled button item
+            </JmListGroupItem>
+        </JmListGroup>
+    </div>
+
+    <div class="col-12 col-md-6">
+        <JmListGroup Flush="_isFlush" Numbered="_isNumbered">
+            <JmListGroupItem>
+                A simple default list group item
+            </JmListGroupItem>
+
+            <JmListGroupItem Color="Color.Primary">
+                A simple primary list group item
+            </JmListGroupItem>
+
+            <JmListGroupItem Color="Color.Secondary">
+                A simple secondary list group item
+            </JmListGroupItem>
+
+            <JmListGroupItem Color="Color.Success">
+                A simple success list group item
+            </JmListGroupItem>
+
+            <JmListGroupItem Color="Color.Danger">
+                A simple danger list group item
+            </JmListGroupItem>
+
+            <JmListGroupItem Color="Color.Warning">
+                A simple warning list group item
+            </JmListGroupItem>
+
+            <JmListGroupItem Color="Color.Info">
+                A simple info list group item
+            </JmListGroupItem>
+
+            <JmListGroupItem Color="Color.Light">
+                A simple light list group item
+            </JmListGroupItem>
+
+            <JmListGroupItem Color="Color.Dark">
+                A simple dark list group item
+            </JmListGroupItem>
+        </JmListGroup>
+    </div>
+
+    <div class="col-12 col-md-6">
+        <JmListGroup Flush="_isFlush" Numbered="_isNumbered">
+            <JmListGroupItem Clicked="@(() => Console.WriteLine("default"))">
+                A simple default list group item
+            </JmListGroupItem>
+
+            <JmListGroupItem Clicked="@(() => Console.WriteLine("primary"))" Color="Color.Primary">
+                A simple primary list group item
+            </JmListGroupItem>
+
+            <JmListGroupItem Clicked="@(() => Console.WriteLine("secondary"))" Color="Color.Secondary">
+                A simple secondary list group item
+            </JmListGroupItem>
+
+            <JmListGroupItem Clicked="@(() => Console.WriteLine("success"))" Color="Color.Success">
+                A simple success list group item
+            </JmListGroupItem>
+
+            <JmListGroupItem Clicked="@(() => Console.WriteLine("danger"))" Color="Color.Danger">
+                A simple danger list group item
+            </JmListGroupItem>
+
+            <JmListGroupItem Clicked="@(() => Console.WriteLine("warning"))" Color="Color.Warning">
+                A simple warning list group item
+            </JmListGroupItem>
+
+            <JmListGroupItem Clicked="@(() => Console.WriteLine("info"))" Color="Color.Info">
+                A simple info list group item
+            </JmListGroupItem>
+
+            <JmListGroupItem Clicked="@(() => Console.WriteLine("light"))" Color="Color.Light">
+                A simple light list group item
+            </JmListGroupItem>
+
+            <JmListGroupItem Clicked="@(() => Console.WriteLine("dark"))" Color="Color.Dark">
+                A simple dark list group item
+            </JmListGroupItem>
+        </JmListGroup>
+    </div>
+</div>
+
+@code {
+    private bool _isFlush = false;
+    private bool _isNumbered = false;
+}
