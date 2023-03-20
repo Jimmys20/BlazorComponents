@@ -12,6 +12,11 @@ namespace Jimmys20.BlazorComponents.Bootstrap
         [Parameter] public EventCallback Clicked { get; set; }
 
         /// <summary>
+        /// Specifies if the dropdown item is disabled.
+        /// </summary>
+        [Parameter] public bool Disabled { get; set; }
+
+        /// <summary>
         /// Specifies the content of the dropdown item.
         /// </summary>
         [Parameter] public RenderFragment ChildContent { get; set; }
@@ -19,8 +24,13 @@ namespace Jimmys20.BlazorComponents.Bootstrap
         protected override CssBuilder CssBuilder => base.CssBuilder
             .AddClass("dropdown-item");
 
-        private async Task HandleMouseDown(MouseEventArgs args)
+        private async Task HandleMouseUp(MouseEventArgs args)
         {
+            if (Disabled)
+            {
+                return;
+            }
+
             if (args.Button == 0)
             {
                 await Clicked.InvokeAsync();

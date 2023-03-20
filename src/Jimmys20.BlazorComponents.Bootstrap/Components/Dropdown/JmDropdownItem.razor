@@ -2,7 +2,9 @@
 @inherits BootstrapComponentBase
 
 <li>
-    <button class="@CssClass" type="button" style="@Style" @attributes="AdditionalAttributes" @onmousedown="HandleMouseDown">
+    <button class="@CssClass" type="button" disabled="@Disabled" style="@Style" @attributes="AdditionalAttributes"
+            @onmousedown="() => { }" @onmousedown:preventDefault @onmouseup="HandleMouseUp">
+
         @ChildContent
     </button>
 </li>
