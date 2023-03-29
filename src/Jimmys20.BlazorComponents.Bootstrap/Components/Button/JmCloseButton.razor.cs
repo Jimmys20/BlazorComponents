@@ -15,8 +15,14 @@ namespace Jimmys20.BlazorComponents.Bootstrap
         /// </summary>
         [Parameter] public bool Disabled { get; set; }
 
+        /// <summary>
+        /// Specifies if the close button is white.
+        /// </summary>
+        [Parameter] public bool White { get; set; }
+
         protected override CssBuilder CssBuilder => base.CssBuilder
-            .AddClass("btn-close");
+            .AddClass("btn-close")
+            .AddClass("btn-close-white", when: White);
 
         private async Task HandleClick()
         {
