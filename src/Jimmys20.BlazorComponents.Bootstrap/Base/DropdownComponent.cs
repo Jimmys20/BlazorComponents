@@ -1,7 +1,4 @@
-﻿using BlazorComponentUtilities;
-using Microsoft.AspNetCore.Components;
-
-namespace Jimmys20.BlazorComponents.Bootstrap
+﻿namespace Jimmys20.BlazorComponents.Bootstrap
 {
     public abstract class DropdownComponent : BootstrapComponentBase
     {

@@ -65,6 +65,11 @@ namespace Jimmys20.BlazorComponents
         /// </summary>
         [Parameter] public string Handle { get; set; }
 
+        /// <summary>
+        /// Specifies the template to be displayed in empty cells.
+        /// </summary>
+        [Parameter] public RenderFragment EmptyTemplate { get; set; }
+
         internal T Payload { get; set; }
 
         private int Capacity => _columns.Count * _rows.Count;
