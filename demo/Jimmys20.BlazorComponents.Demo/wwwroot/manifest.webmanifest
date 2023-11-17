@@ -1,6 +1,7 @@
 {
   "name": "Jimmys20.BlazorComponents.Demo",
   "short_name": "Jimmys20.BlazorComponents.Demo",
+  "id": "./",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
