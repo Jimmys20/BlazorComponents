@@ -8,10 +8,10 @@ public class CustomerService
     {
         return new List<Customer>()
         {
-            new Customer { Id = 1, Name = "Jim", Index = 0 },
-            new Customer { Id = 2, Name = "George", Index = 2 },
-            new Customer { Id = 3, Name = "John", Index = 5 },
-            new Customer { Id = 4, Name = "Lisa", Index = 9 },
+            new() { Id = 1, Name = "Jim", Index = 0 },
+            new() { Id = 2, Name = "George", Index = 2 },
+            new() { Id = 3, Name = "John", Index = 5 },
+            new() { Id = 4, Name = "Lisa", Index = 9 },
         };
     }
 }

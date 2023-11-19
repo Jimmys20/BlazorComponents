@@ -74,8 +74,8 @@ public partial class JmGridLayout<T>
 
     private int Capacity => _columns.Count * _rows.Count;
 
-    private readonly List<JmGridLayoutColumn<T>> _columns = new();
-    private readonly List<JmGridLayoutRow<T>> _rows = new();
+    private readonly List<JmGridLayoutColumn<T>> _columns = [];
+    private readonly List<JmGridLayoutRow<T>> _rows = [];
 
     protected override void OnParametersSet()
     {
@@ -102,18 +102,16 @@ public partial class JmGridLayout<T>
 
     internal void RemoveColumn(JmGridLayoutColumn<T> gridLayoutColumn)
     {
-        if (_columns.Contains(gridLayoutColumn))
+        if (_columns.Remove(gridLayoutColumn))
         {
-            _columns.Remove(gridLayoutColumn);
             StateHasChanged();
         }
     }
 
     internal void RemoveRow(JmGridLayoutRow<T> gridLayoutRow)
     {
-        if (_rows.Contains(gridLayoutRow))
+        if (_rows.Remove(gridLayoutRow))
         {
-            _rows.Remove(gridLayoutRow);
             StateHasChanged();
         }
     }
