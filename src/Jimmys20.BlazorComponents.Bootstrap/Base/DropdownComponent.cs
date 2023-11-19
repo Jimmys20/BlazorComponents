@@ -1,19 +1,18 @@
-﻿namespace Jimmys20.BlazorComponents.Bootstrap
+﻿namespace Jimmys20.BlazorComponents.Bootstrap;
+
+public abstract class DropdownComponent : BootstrapComponentBase
 {
-    public abstract class DropdownComponent : BootstrapComponentBase
+    internal bool Visible { get; private set; }
+
+    internal void Toggle()
     {
-        internal bool Visible { get; private set; }
+        Visible = !Visible;
+        StateHasChanged();
+    }
 
-        internal void Toggle()
-        {
-            Visible = !Visible;
-            StateHasChanged();
-        }
-
-        internal void Hide()
-        {
-            Visible = false;
-            StateHasChanged();
-        }
+    internal void Hide()
+    {
+        Visible = false;
+        StateHasChanged();
     }
 }

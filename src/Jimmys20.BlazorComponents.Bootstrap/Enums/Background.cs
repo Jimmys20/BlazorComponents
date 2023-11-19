@@ -1,18 +1,17 @@
-﻿namespace Jimmys20.BlazorComponents.Bootstrap
+﻿namespace Jimmys20.BlazorComponents.Bootstrap;
+
+public enum Background
 {
-    public enum Background
-    {
-        Default,
-        Primary,
-        Secondary,
-        Success,
-        Danger,
-        Warning,
-        Info,
-        Light,
-        Dark,
-        Body,
-        White,
-        Transparent
-    }
+    Default,
+    Primary,
+    Secondary,
+    Success,
+    Danger,
+    Warning,
+    Info,
+    Light,
+    Dark,
+    Body,
+    White,
+    Transparent
 }

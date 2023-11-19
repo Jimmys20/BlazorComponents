@@ -1,9 +1,8 @@
-﻿namespace Jimmys20.BlazorComponents.Bootstrap
+﻿namespace Jimmys20.BlazorComponents.Bootstrap;
+
+public enum ButtonType
 {
-    public enum ButtonType
-    {
-        Button,
-        Submit,
-        Reset
-    }
+    Button,
+    Submit,
+    Reset
 }

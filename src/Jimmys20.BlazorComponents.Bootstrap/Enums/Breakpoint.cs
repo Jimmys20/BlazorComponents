@@ -1,12 +1,11 @@
-﻿namespace Jimmys20.BlazorComponents.Bootstrap
+﻿namespace Jimmys20.BlazorComponents.Bootstrap;
+
+public enum Breakpoint
 {
-    public enum Breakpoint
-    {
-        Default,
-        Small,
-        Medium,
-        Large,
-        ExtraLarge,
-        ExtraExtraLarge
-    }
+    Default,
+    Small,
+    Medium,
+    Large,
+    ExtraLarge,
+    ExtraExtraLarge
 }

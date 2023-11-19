@@ -1,10 +1,9 @@
-﻿namespace Jimmys20.BlazorComponents.Bootstrap
+﻿namespace Jimmys20.BlazorComponents.Bootstrap;
+
+public enum ModalSize
 {
-    public enum ModalSize
-    {
-        Default,
-        Small,
-        Large,
-        ExtraLarge
-    }
+    Default,
+    Small,
+    Large,
+    ExtraLarge
 }

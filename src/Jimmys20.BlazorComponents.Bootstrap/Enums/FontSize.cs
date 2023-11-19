@@ -1,13 +1,12 @@
-﻿namespace Jimmys20.BlazorComponents.Bootstrap
+﻿namespace Jimmys20.BlazorComponents.Bootstrap;
+
+public enum FontSize
 {
-    public enum FontSize
-    {
-        Default,
-        Is1,
-        Is2,
-        Is3,
-        Is4,
-        Is5,
-        Is6
-    }
+    Default,
+    Is1,
+    Is2,
+    Is3,
+    Is4,
+    Is5,
+    Is6
 }

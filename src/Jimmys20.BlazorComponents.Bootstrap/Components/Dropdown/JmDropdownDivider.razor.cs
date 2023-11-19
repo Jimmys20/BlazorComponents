@@ -1,10 +1,9 @@
 ﻿using BlazorComponentUtilities;
 
-namespace Jimmys20.BlazorComponents.Bootstrap
+namespace Jimmys20.BlazorComponents.Bootstrap;
+
+public partial class JmDropdownDivider : BootstrapComponentBase
 {
-    public partial class JmDropdownDivider : BootstrapComponentBase
-    {
-        protected override CssBuilder CssBuilder => base.CssBuilder
-            .AddClass("dropdown-divider");
-    }
+    protected override CssBuilder CssBuilder => base.CssBuilder
+        .AddClass("dropdown-divider");
 }
