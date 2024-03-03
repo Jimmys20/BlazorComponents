@@ -13,7 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.0" />
+    <PackageReference Include="Excubo.Blazor.Canvas" Version="3.2.42" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.2" />
   </ItemGroup>
 
   <ItemGroup>

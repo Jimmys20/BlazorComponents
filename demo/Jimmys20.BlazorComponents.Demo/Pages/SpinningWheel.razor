@@ -1,0 +1,44 @@
+﻿@page "/spinningwheel"
+@inject IDialogService Dialog
+
+<PageTitle>Spinning wheel</PageTitle>
+
+<h1>Spinning wheel</h1>
+
+<JmSpinningWheel @ref="_spinningWheelRef"
+                 NumberOfSlots="_numberOfSlots"
+                 SlotNames="_slotNames"
+                 Size="600"
+                 SpinStarted="OnSpinStarted"
+                 SpinCompleted="OnSpinCompleted" />
+
+<JmButton Color="Color.Primary" Clicked="Spin">Spin</JmButton>
+
+@code {
+    private JmSpinningWheel _spinningWheelRef;
+    private int _numberOfSlots = 18;
+    private string[] _slotNames =
+    [
+        "50", "100", "150", "200", "1000", "500", "550", "600", "650",
+    "700", "10", "800", "2000", "60", "995", "500", "10000", "900"
+    ];
+
+    private int _numberOfTimes = 5;
+    private bool _shouldRandomizeNumberOfSpins = true;
+
+    private async Task Spin()
+    {
+        await _spinningWheelRef.Spin(_numberOfTimes, _shouldRandomizeNumberOfSpins);
+    }
+
+    private void OnSpinStarted()
+    {
+        Console.WriteLine("Spin started");
+    }
+
+    private async Task OnSpinCompleted(string nameOfSelectedSlot)
+    {
+        //Console.WriteLine($"Spin completed - nameOfSelectedSlot: {nameOfSelectedSlot}");
+        await Dialog.Alert($"Spin completed - nameOfSelectedSlot: {nameOfSelectedSlot}");
+    }
+}

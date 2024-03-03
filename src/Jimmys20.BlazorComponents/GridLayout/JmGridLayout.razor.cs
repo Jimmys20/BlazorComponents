@@ -79,7 +79,7 @@ public partial class JmGridLayout<T>
 
     protected override void OnParametersSet()
     {
-        Items ??= Enumerable.Empty<T>();
+        Items ??= [];
     }
 
     internal void AddColumn(JmGridLayoutColumn<T> gridLayoutColumn)

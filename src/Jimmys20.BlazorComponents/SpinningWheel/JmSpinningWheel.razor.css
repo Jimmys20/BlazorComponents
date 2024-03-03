@@ -1,0 +1,5 @@
+﻿#wheel {
+    display: block;
+    border-radius: 50%;
+    transform: rotate(-90deg);
+}
