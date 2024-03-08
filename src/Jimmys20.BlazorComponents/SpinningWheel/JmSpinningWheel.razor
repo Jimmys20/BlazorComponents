@@ -1,3 +1,7 @@
 ﻿@namespace Jimmys20.BlazorComponents
 
 <canvas @ref="_canvasRef" id="wheel" width="@Size" height="@Size" @attributes="AdditionalAttributes"></canvas>
+
+<CascadingValue Value="this" IsFixed>
+    @ChildContent
+</CascadingValue>

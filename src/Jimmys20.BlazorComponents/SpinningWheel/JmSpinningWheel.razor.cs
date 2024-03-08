@@ -1,7 +1,6 @@
 ﻿using Excubo.Blazor.Canvas;
 using Excubo.Blazor.Canvas.Contexts;
 using Jimmys20.BlazorComponents.Extensions;
-using Jimmys20.BlazorComponents.SpinningWheel.Internal;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 
@@ -9,12 +8,6 @@ namespace Jimmys20.BlazorComponents;
 
 public partial class JmSpinningWheel : IAsyncDisposable
 {
-    //private static readonly string[] Colors = ["#f82", "#0bf", "#fb0", "#0fb", "#b0f", "#f0b", "#bf0"];
-    private static readonly string[] Colors =
-    [
-        "#ffcc01", "#675ca1", "#059dde", "#a7d02a", "#26cda2", "#903288", "#222025", "#e50305", "#eb7008"
-    ];
-
     private IJSObjectReference _module;
     private DotNetObjectReference<JmSpinningWheel> _selfReference;
     private ElementReference _canvasRef;
@@ -22,16 +15,7 @@ public partial class JmSpinningWheel : IAsyncDisposable
     private bool _isSpinning = false;
     private double _angle = 0;
     private int _selectedSlotIndex = -1;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    [Parameter] public int NumberOfSlots { get; set; } = 18;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    [Parameter] public IList<string> SlotNames { get; set; }
+    private readonly List<JmSpinningWheelSector> _sectors = [];
 
     /// <summary>
     /// 
@@ -54,12 +38,18 @@ public partial class JmSpinningWheel : IAsyncDisposable
     [Parameter] public int Size { get; set; }
 
     /// <summary>
+    /// 
+    /// </summary>
+    [Parameter] public RenderFragment ChildContent { get; set; }
+
+    /// <summary>
     /// Captures values that don't match any other parameter.
     /// </summary>
     [Parameter(CaptureUnmatchedValues = true)] public IDictionary<string, object> AdditionalAttributes { get; set; }
 
     [Inject] private IJSRuntime JS { get; set; }
 
+    private int NumberOfSlots => _sectors.Count;
     private double Diameter => Size;
     private double Radius => Diameter / 2;
     private double Arc => Math.Tau / NumberOfSlots;
@@ -91,17 +81,13 @@ public partial class JmSpinningWheel : IAsyncDisposable
 
         for (var i = 0; i < NumberOfSlots; i++)
         {
-            var sector = new Sector
-            {
-                Color = Colors[i % Colors.Length],
-                Label = SlotNames[i % SlotNames.Count],
-            };
+            var sector = _sectors[i];
 
             await DrawSector(batch, sector, i);
         }
     }
 
-    private async Task DrawSector(Batch2D batch, Sector sector, int i)
+    private async Task DrawSector(Batch2D batch, JmSpinningWheelSector sector, int i)
     {
         double angle = Arc * i;
 
@@ -158,7 +144,7 @@ public partial class JmSpinningWheel : IAsyncDisposable
         _isSpinning = false;
         //_selectedSlotIndex = -1;
 
-        var nameOfSelectedSlot = SlotNames[_selectedSlotIndex];
+        var nameOfSelectedSlot = _sectors[_selectedSlotIndex].Label;
         await SpinCompleted.InvokeAsync(nameOfSelectedSlot);
     }
 
@@ -175,6 +161,23 @@ public partial class JmSpinningWheel : IAsyncDisposable
         if (_context != null)
         {
             await _context.DisposeAsync();
+        }
+    }
+
+    internal void AddSector(JmSpinningWheelSector spinningWheelSector)
+    {
+        if (!_sectors.Contains(spinningWheelSector))
+        {
+            _sectors.Add(spinningWheelSector);
+            //StateHasChanged();
+        }
+    }
+
+    internal void RemoveSector(JmSpinningWheelSector spinningWheelSector)
+    {
+        if (_sectors.Remove(spinningWheelSector))
+        {
+            //StateHasChanged();
         }
     }
 }

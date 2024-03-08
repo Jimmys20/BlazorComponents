@@ -26,7 +26,7 @@ public partial class JmAlert : BootstrapComponentBase
     [Parameter] public Color Color { get; set; }
 
     /// <summary>
-    /// Specifies content of the alert.
+    /// Specifies the content of the alert.
     /// </summary>
     [Parameter] public RenderFragment ChildContent { get; set; }
 

@@ -5,16 +5,40 @@
 
 <h1>Spinning wheel</h1>
 
-<JmSpinningWheel @ref="_spinningWheelRef"
-                 NumberOfSlots="_numberOfSlots"
-                 SlotNames="_slotNames"
-                 Size="600"
-                 SpinStarted="OnSpinStarted"
-                 SpinCompleted="OnSpinCompleted" />
+<div class="row">
+    <div class="col-lg-6">
+        <JmSpinningWheel @ref="_spinningWheelRef"
+                         Size="600"
+                         SpinStarted="OnSpinStarted"
+                         SpinCompleted="OnSpinCompleted">
 
-<JmButton Color="Color.Primary" Clicked="Spin">Spin</JmButton>
+            @for (var i = 0; i < _numberOfSlots; i++)
+            {
+                <JmSpinningWheelSector Color="@Colors[i % Colors.Length]"
+                                       Label="@_slotNames[i % _slotNames.Length]" />
+            }
+        </JmSpinningWheel>
+
+        <JmButton Color="Color.Primary" Clicked="Spin">Spin</JmButton>
+    </div>
+
+    <div class="col-lg-6">
+        <JmSpinningWheel Size="300">
+            <JmSpinningWheelSector Color="#f82" Label="Winter" />
+            <JmSpinningWheelSector Color="#0bf" Label="Autumn" />
+            <JmSpinningWheelSector Color="#fb0" Label="Summer" />
+            <JmSpinningWheelSector Color="#0fb" Label="Spring" />
+        </JmSpinningWheel>
+    </div>
+</div>
 
 @code {
+    //private static readonly string[] Colors = ["#f82", "#0bf", "#fb0", "#0fb", "#b0f", "#f0b", "#bf0"];
+    private static readonly string[] Colors =
+    [
+        "#ffcc01", "#675ca1", "#059dde", "#a7d02a", "#26cda2", "#903288", "#222025", "#e50305", "#eb7008"
+    ];
+
     private JmSpinningWheel _spinningWheelRef;
     private int _numberOfSlots = 18;
     private string[] _slotNames =
