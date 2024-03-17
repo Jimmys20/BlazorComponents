@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 
-namespace Jimmys20.BlazorComponents.GridLayout.Internal;
+namespace Jimmys20.BlazorComponents.Components.GridLayout.Internal;
 
 public partial class JmGridLayoutDropzone<T>
 {

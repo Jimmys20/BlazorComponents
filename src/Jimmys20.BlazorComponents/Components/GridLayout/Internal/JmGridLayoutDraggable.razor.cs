@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 
-namespace Jimmys20.BlazorComponents.GridLayout.Internal;
+namespace Jimmys20.BlazorComponents.Components.GridLayout.Internal;
 
 public partial class JmGridLayoutDraggable<T>
 {

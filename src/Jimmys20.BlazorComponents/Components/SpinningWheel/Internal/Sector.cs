@@ -1,4 +1,4 @@
-﻿namespace Jimmys20.BlazorComponents.SpinningWheel.Internal;
+﻿namespace Jimmys20.BlazorComponents.Components.SpinningWheel.Internal;
 
 internal class Sector
 {
