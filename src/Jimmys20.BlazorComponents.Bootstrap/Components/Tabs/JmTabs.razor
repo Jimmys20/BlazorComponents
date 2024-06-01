@@ -2,11 +2,17 @@
 @inherits BootstrapComponentBase
 
 <CascadingValue Value="this" IsFixed>
-    <ul class="@CssClass" role="tablist" style="@Style" @attributes="AdditionalAttributes">
-        @Items
-    </ul>
+    @if (Items != null)
+    {
+        <ul class="@CssClass" role="tablist" style="@Style" @attributes="AdditionalAttributes">
+            @Items
+        </ul>
+    }
 
-    <div class="tab-content">
-        @Content
-    </div>
+    @if (Content != null)
+    {
+        <div class="tab-content">
+            @Content
+        </div>
+    }
 </CascadingValue>
