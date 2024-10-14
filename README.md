@@ -16,6 +16,16 @@ Collection of various Blazor components.
 @using Jimmys20.BlazorComponents
 ```
 
+#### Add the following to your Program.cs.
+
+```csharp
+using Jimmys20.BlazorComponents;
+
+/* ... */
+
+builder.Services.AddJimmys20BlazorComponents();
+```
+
 ## Documentation
 
 - [JmGridLayout](https://github.com/Jimmys20/BlazorComponents/wiki/JmGridLayout)

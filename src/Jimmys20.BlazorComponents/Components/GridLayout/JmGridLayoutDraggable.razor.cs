@@ -1,12 +1,15 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 
-namespace Jimmys20.BlazorComponents.Components.GridLayout.Internal;
+namespace Jimmys20.BlazorComponents;
 
-public partial class JmGridLayoutDraggable<T>
+public partial class JmGridLayoutDraggable<T> : IDisposable
 {
     [Inject]
     private IJSRuntime JS { get; set; }
+
+    [Inject]
+    private DragDropService<T> DragDropService { get; set; }
 
     [Parameter]
     public T Item { get; set; }
@@ -14,12 +17,13 @@ public partial class JmGridLayoutDraggable<T>
     [Parameter]
     public RenderFragment ChildContent { get; set; }
 
+    [Parameter]
+    public string Handle { get; set; }
+
     [CascadingParameter]
     private JmGridLayout<T> GridLayout { get; set; }
 
-    private bool Draggable => GridLayout.Draggable;
-
-    private string Handle => GridLayout.Handle;
+    private bool Draggable => GridLayout?.Draggable ?? true;
 
     private ElementReference _draggableRef;
 
@@ -38,13 +42,20 @@ public partial class JmGridLayoutDraggable<T>
     {
         Console.WriteLine("HandleDragStart");
 
-        GridLayout.Payload = Item;
+        DragDropService.Payload = Item;
     }
 
     private void HandleDragEnd()
     {
         Console.WriteLine("HandleDragEnd");
 
-        GridLayout.Payload = default;
+        DragDropService.Payload = default;
+    }
+
+    public void Dispose()
+    {
+        Console.WriteLine("Dispose");
+
+        DragDropService.Payload = default;
     }
 }

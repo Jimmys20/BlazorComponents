@@ -5,6 +5,9 @@ namespace Jimmys20.BlazorComponents;
 [CascadingTypeParameter(nameof(T))]
 public partial class JmGridLayout<T>
 {
+    [Inject]
+    private DragDropService<T> DragDropService { get; set; }
+
     /// <summary>
     /// Specifies the collection of items that will be displayed.
     /// </summary>
@@ -70,7 +73,7 @@ public partial class JmGridLayout<T>
     /// </summary>
     [Parameter] public RenderFragment EmptyTemplate { get; set; }
 
-    internal T Payload { get; set; }
+    internal T Payload => DragDropService.Payload;
 
     private int Capacity => _columns.Count * _rows.Count;
 

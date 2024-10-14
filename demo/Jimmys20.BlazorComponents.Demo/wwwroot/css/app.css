@@ -107,11 +107,11 @@ code {
     border-radius: 0.2rem;
 }
 
-.jm-draggable {
+.jm-container .jm-draggable {
     height: 100%;
 }
 
-    .jm-draggable[draggable=true] .card-header {
+    .jm-container .jm-draggable[draggable=true] .card-header {
         cursor: move;
     }
 

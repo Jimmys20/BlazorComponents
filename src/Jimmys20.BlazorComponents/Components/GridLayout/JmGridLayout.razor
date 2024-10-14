@@ -20,7 +20,7 @@
             <JmGridLayoutDropzone Index="i" T="T">
                 @if (!EqualityComparer<T>.Default.Equals(item, default))
                 {
-                    <JmGridLayoutDraggable Item="item">
+                    <JmGridLayoutDraggable Item="item" Handle="@Handle">
                         @ItemTemplate(item)
                     </JmGridLayoutDraggable>
                 }
