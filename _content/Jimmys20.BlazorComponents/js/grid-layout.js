@@ -1,6 +1,15 @@
 export function enableDragHandle(draggable, handleSelector) {
-    var handle = draggable.querySelector(handleSelector);
-    var target = false;
+    if (!draggable) {
+        return;
+    }
+
+    const handle = draggable.querySelector(handleSelector);
+
+    if (!handle) {
+        return;
+    }
+
+    let target = false;
 
     draggable.onmousedown = function (e) {
         target = e.target;
