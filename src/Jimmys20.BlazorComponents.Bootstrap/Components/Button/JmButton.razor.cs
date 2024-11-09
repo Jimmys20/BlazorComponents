@@ -17,6 +17,11 @@ public partial class JmButton : BootstrapComponentBase
     [Parameter] public ButtonType Type { get; set; }
 
     /// <summary>
+    /// Specifies the size of the button.
+    /// </summary>
+    [Parameter] public ButtonSize Size { get; set; }
+
+    /// <summary>
     /// Fires when the button is clicked.
     /// </summary>
     [Parameter] public EventCallback Clicked { get; set; }
@@ -59,6 +64,7 @@ public partial class JmButton : BootstrapComponentBase
     protected override CssBuilder CssBuilder => base.CssBuilder
         .AddClass("btn")
         .AddClass(Outline ? $"btn-outline-{Color.ToColorString()}" : $"btn-{Color.ToColorString()}", when: Color != Color.Default)
+        .AddClass(Size.ToButtonSizeString(), when: Size != ButtonSize.Default)
         .AddClass("active", when: Active);
 
     private async Task HandleClick(MouseEventArgs args)

@@ -91,4 +91,12 @@ internal static class EnumExtensions
         TextColor.White50 => "text-white-50",
         _ => throw new ArgumentOutOfRangeException(nameof(textColor), $"Not expected text color value: {textColor}"),
     };
+
+    public static string ToButtonSizeString(this ButtonSize buttonSize) => buttonSize switch
+    {
+        ButtonSize.Default => null,
+        ButtonSize.Small => "btn-sm",
+        ButtonSize.Large => "btn-lg",
+        _ => throw new ArgumentOutOfRangeException(nameof(buttonSize), $"Not expected button size value: {buttonSize}"),
+    };
 }
