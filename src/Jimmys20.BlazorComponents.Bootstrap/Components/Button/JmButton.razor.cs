@@ -17,11 +17,6 @@ public partial class JmButton : BootstrapComponentBase
     [Parameter] public ButtonType Type { get; set; }
 
     /// <summary>
-    /// Specifies the size of the button.
-    /// </summary>
-    [Parameter] public ButtonSize Size { get; set; }
-
-    /// <summary>
     /// Fires when the button is clicked.
     /// </summary>
     [Parameter] public EventCallback Clicked { get; set; }
@@ -35,6 +30,11 @@ public partial class JmButton : BootstrapComponentBase
     /// Specifies if the button is outline.
     /// </summary>
     [Parameter] public bool Outline { get; set; }
+
+    /// <summary>
+    /// Specifies the size of the button.
+    /// </summary>
+    [Parameter] public ButtonSize Size { get; set; }
 
     /// <summary>
     /// Specifies if the button is active.
