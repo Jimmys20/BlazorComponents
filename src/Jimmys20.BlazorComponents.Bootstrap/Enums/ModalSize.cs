@@ -5,5 +5,6 @@ public enum ModalSize
     Default,
     Small,
     Large,
-    ExtraLarge
+    ExtraLarge,
+    Fullscreen
 }

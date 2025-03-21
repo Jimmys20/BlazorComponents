@@ -70,6 +70,7 @@ internal static class EnumExtensions
         ModalSize.Small => "modal-sm",
         ModalSize.Large => "modal-lg",
         ModalSize.ExtraLarge => "modal-xl",
+        ModalSize.Fullscreen => "modal-fullscreen",
         _ => throw new ArgumentOutOfRangeException(nameof(modalSize), $"Not expected modal size value: {modalSize}"),
     };
 
