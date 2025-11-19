@@ -71,7 +71,7 @@ public partial class JmGridLayout<T>
     /// <summary>
     /// Specifies the template to be displayed in empty cells.
     /// </summary>
-    [Parameter] public RenderFragment EmptyTemplate { get; set; }
+    [Parameter] public RenderFragment<int> EmptyTemplate { get; set; }
 
     internal T Payload => DragDropService.Payload;
 
