@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Jimmys20.BlazorComponents.Demo",
   "resources": {
-    "hash": "sha256-9bimgszRdQKq1vh5zlZd7yTLtxpSTfleNvZRKEP2QKQ=",
+    "hash": "sha256-91BQLy4KolOYFcQ1CKJ3u6NR3tZZ5nEU/Kq/cGipmLk=",
     "fingerprinting": {
       "BlazorComponentUtilities.p9kxg9c327.wasm": "BlazorComponentUtilities.wasm",
       "BlazorPro.BlazorSize.fjkic6tfmp.wasm": "BlazorPro.BlazorSize.wasm",
@@ -41,9 +41,9 @@
       "System.Text.RegularExpressions.k8ibga7wut.wasm": "System.Text.RegularExpressions.wasm",
       "netstandard.zw21in9cpv.wasm": "netstandard.wasm",
       "System.Private.CoreLib.r5qkdqehvf.wasm": "System.Private.CoreLib.wasm",
-      "Jimmys20.BlazorComponents.Bootstrap.3ab0g5bdsl.wasm": "Jimmys20.BlazorComponents.Bootstrap.wasm",
-      "Jimmys20.BlazorComponents.o9oe28aex9.wasm": "Jimmys20.BlazorComponents.wasm",
-      "Jimmys20.BlazorComponents.Demo.k7rxcqdari.wasm": "Jimmys20.BlazorComponents.Demo.wasm",
+      "Jimmys20.BlazorComponents.Bootstrap.72hnbulinu.wasm": "Jimmys20.BlazorComponents.Bootstrap.wasm",
+      "Jimmys20.BlazorComponents.4ebj02b7oe.wasm": "Jimmys20.BlazorComponents.wasm",
+      "Jimmys20.BlazorComponents.Demo.lklwsak8rb.wasm": "Jimmys20.BlazorComponents.Demo.wasm",
       "dotnet.js": "dotnet.js",
       "dotnet.native.noby4tlk4d.js": "dotnet.native.js",
       "dotnet.native.qe75a9vfqn.wasm": "dotnet.native.wasm",
@@ -107,9 +107,9 @@
       "System.Text.Json.08vf848ped.wasm": "sha256-0KMhNLGHsFQ0II1ugHLUQHnWpq2OgbnbmzjGHjzjyfU=",
       "System.Text.RegularExpressions.k8ibga7wut.wasm": "sha256-7OYvLuFLvwbax++2u+uoDmoaX8o/Q8wcYJC92eP1YjA=",
       "netstandard.zw21in9cpv.wasm": "sha256-/ZwVP9+O2Y3TE0gP2Zck22h29i25goO5pSxo1trfvW0=",
-      "Jimmys20.BlazorComponents.Bootstrap.3ab0g5bdsl.wasm": "sha256-G23OMOcM42w6Rp2pv16T/lYlwe+0PaTs31J03TIKAzQ=",
-      "Jimmys20.BlazorComponents.o9oe28aex9.wasm": "sha256-XPQ1u9vzaCFziTchmcE9m6eAj/Eaa/tepcGp5Lr2RGQ=",
-      "Jimmys20.BlazorComponents.Demo.k7rxcqdari.wasm": "sha256-AIx17gco5ed0xqdwDF+JX7ujwcpf4uL0wb3yl0sxZY8="
+      "Jimmys20.BlazorComponents.Bootstrap.72hnbulinu.wasm": "sha256-H6nlWQmHmggL/FF7Z8NQKSL8PpkTDlwfgzBWKcG/IDA=",
+      "Jimmys20.BlazorComponents.4ebj02b7oe.wasm": "sha256-bHgc5yyr76sUCCQtvGo8QAIxoUEHO5NHbpaOqtpCY8E=",
+      "Jimmys20.BlazorComponents.Demo.lklwsak8rb.wasm": "sha256-y4aaETmfQxL1J2quOlyOuwH5LfzZlu3MZdd6kiThEmc="
     }
   },
   "cacheBootResources": true,
