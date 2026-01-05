@@ -16,6 +16,7 @@
         @for (var i = 0; i < Capacity; i++)
         {
             var item = Items.FirstOrDefault(x => IndexField.Invoke(x) == i);
+            var j = i;
 
             <JmGridLayoutDropzone Index="i" T="T">
                 @if (!EqualityComparer<T>.Default.Equals(item, default))
@@ -26,7 +27,7 @@
                 }
                 else if (EmptyTemplate != null)
                 {
-                    @EmptyTemplate(i)
+                    @EmptyTemplate(j)
                 }
             </JmGridLayoutDropzone>
         }
